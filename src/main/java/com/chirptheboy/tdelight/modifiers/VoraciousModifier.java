@@ -11,7 +11,6 @@ import slimeknights.tconstruct.library.tools.nbt.IModifierToolStack;
 
 import java.util.List;
 
-
 public class VoraciousModifier extends IncrementalModifier {
     private static final String TOOLTIP_KILLS_KEY = "modifier.tdelight.voracious.extra_tooltip1";
     private static final String TOOLTIP_BONUS_KEY = "modifier.tdelight.voracious.extra_tooltip2";
