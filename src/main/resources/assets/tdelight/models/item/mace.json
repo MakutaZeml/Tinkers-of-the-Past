@@ -1,0 +1,15 @@
+{
+  "loader": "tconstruct:tool",
+  "parent": "forge:item/default-tool",
+  "textures": {
+    "head":        "tdelight:item/tool/mace_head",
+    "broken_head": "tdelight:item/tool/multipart/mace_head_broken",
+    "handle":      "tconstruct:item/tool/pickaxe/handle",
+    "binding":     "tconstruct:item/tool/hand_axe/binding"
+  },
+  "parts": [
+    { "name": "handle",  "index": 1 },
+    { "name": "head",    "index": 0, "broken": "broken_head" },
+    { "name": "binding", "index": 2 }
+  ]
+}

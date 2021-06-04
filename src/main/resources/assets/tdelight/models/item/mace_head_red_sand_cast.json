@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "tdelight:item/red_sand_cast/mace_head"
+    }
+}

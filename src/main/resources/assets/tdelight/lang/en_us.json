@@ -1,0 +1,24 @@
+{
+    "item.tdelight.tinkers_handbook": "Tinkers' Handbook",
+    "item.tdelight.miraculous_machinery.tooltip": "It reads good.",
+    
+    "tdelight.attribute.name.generic.fake_harvest_speed": "Mining Speed",
+    
+    "item.tdelight.mace": "Mace",
+    "item.tdelight.mace.description":"The mace is a powerful, single-handed weapon, applying extra knockback.",
+    
+    "item.tdelight.mace_head": "Mace Head",
+    
+    "item.tdelight.mace_head_cast": "Mace Head Gold Cast",
+    "item.tdelight.mace_head_sand_cast": "Mace Head Sand Cast",
+    "item.tdelight.mace_head_red_sand_cast": "Mace Head Red Sand Cast",
+    
+    "modifier.tdelight.voracious": "Voracious",
+    "modifier.tdelight.voracious.flavor": "Hungry for more.",
+    "modifier.tdelight.voracious.description": "Increases the weapon's attack with each kill.",
+    "modifier.tdelight.voracious_trait": "Voracious",
+    "modifier.tdelight.voracious_trait.flavor": "Hungry for more.",
+    "modifier.tdelight.voracious_trait.description": "Increases the weapon's attack with each kill.",
+    "modifier.tdelight.voracious.extra_tooltip1": "Kills: %s",
+    "modifier.tdelight.voracious.extra_tooltip2": "Bonus: %s"
+}

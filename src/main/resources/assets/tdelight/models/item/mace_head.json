@@ -1,0 +1,8 @@
+{
+  "loader": "tconstruct:material",
+  "parent": "forge:item/default",
+  "textures": {
+    "texture": "tdelight:item/tool/mace_head"
+  },
+  "offset": [-4, 3]
+}

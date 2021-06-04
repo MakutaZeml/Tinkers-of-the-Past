@@ -1,3 +1,1 @@
-# Tinkers Delight
-
-It's delightful.
+#Tinkers' Delight
