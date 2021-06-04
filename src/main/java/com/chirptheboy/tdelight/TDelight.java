@@ -1,8 +1,8 @@
 package com.chirptheboy.tdelight;
 
 import com.chirptheboy.tdelight.data.DelightRecipeProvider;
-import com.chirptheboy.tdelight.data.EnergisticsLootTableProvider;
-import com.chirptheboy.tdelight.data.TagProvider;
+import com.chirptheboy.tdelight.data.DelightLootTableProvider;
+import com.chirptheboy.tdelight.data.tags.ItemTagProvider;
 import com.chirptheboy.tdelight.items.DelightBookItem;
 import com.chirptheboy.tdelight.modifiers.VoraciousModifier;
 import com.chirptheboy.tdelight.tools.MaceTool;
@@ -42,6 +42,8 @@ import slimeknights.mantle.registration.deferred.FluidDeferredRegister;
 import slimeknights.mantle.registration.deferred.TileEntityTypeDeferredRegister;
 import slimeknights.mantle.registration.object.ItemObject;
 import slimeknights.tconstruct.common.TinkerModule;
+import slimeknights.tconstruct.common.data.tags.BlockTagProvider;
+import slimeknights.tconstruct.common.data.tags.FluidTagProvider;
 import slimeknights.tconstruct.common.registration.BlockDeferredRegisterExtension;
 import slimeknights.tconstruct.common.registration.CastItemObject;
 import slimeknights.tconstruct.common.registration.ItemDeferredRegisterExtension;
@@ -80,7 +82,6 @@ public class TDelight {
     protected static final FluidDeferredRegister                    FLUIDS = new FluidDeferredRegister(TDelight.modID);
     protected static final TileEntityTypeDeferredRegister           TILE_ENTITIES = new TileEntityTypeDeferredRegister(TDelight.modID);
     protected static final ContainerTypeDeferredRegister            CONTAINERS = new ContainerTypeDeferredRegister(TDelight.modID);
-
     protected static final DeferredRegister<Modifier>               MODIFIERS = DeferredRegister.create(Modifier.class, TDelight.modID);
     protected static final DeferredRegister<Attribute>              ATTRIBUTES = DeferredRegister.create(ForgeRegistries.ATTRIBUTES, TDelight.modID);
     protected static final DeferredRegister<IRecipeSerializer<?>>   RECIPE_SERIALIZERS = DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, TDelight.modID);
@@ -89,8 +90,10 @@ public class TDelight {
 
     private static final Item.Properties PARTS_PROPS = new Item.Properties()
             .group(TinkerToolParts.TAB_TOOL_PARTS);
+
     private static final Item.Properties SMELTERY_PROPS = new Item.Properties()
             .group(TinkerSmeltery.TAB_SMELTERY);
+
     private static final Item.Properties BOOK = new Item.Properties()
             .group(TinkerModule.TAB_GENERAL)
             .maxStackSize(1);
@@ -145,13 +148,12 @@ public class TDelight {
         if (event.includeServer()) {
             DataGenerator datagenerator = event.getGenerator();
             ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
-
-            TagProvider blockTagProvider = new TagProvider(datagenerator, modID, existingFileHelper);
+            BlockTagProvider blockTagProvider = new BlockTagProvider(datagenerator, existingFileHelper);
             datagenerator.addProvider(blockTagProvider);
-            datagenerator.addProvider(new TagProvider.ItemTag(datagenerator, blockTagProvider, modID, existingFileHelper));
-            datagenerator.addProvider(new TagProvider.FluidTag(datagenerator, modID, existingFileHelper));
+            datagenerator.addProvider(new ItemTagProvider(datagenerator, blockTagProvider, existingFileHelper));
+            datagenerator.addProvider(new FluidTagProvider(datagenerator, existingFileHelper));
             datagenerator.addProvider(new DelightRecipeProvider(datagenerator));
-            datagenerator.addProvider(new EnergisticsLootTableProvider(datagenerator));
+            datagenerator.addProvider(new DelightLootTableProvider(datagenerator));
         }
     }
 

@@ -16,8 +16,9 @@ public class DelightFluids extends TinkerModule {
     }
 
     // Shakespearean metals
-    public static final FluidObject<ForgeFlowingFluid> moltenHamletite   = FLUIDS.register("molten_hamletite", hotBuilder().temperature(1000), Material.LAVA, 6);
-
+    public static final FluidObject<ForgeFlowingFluid> moltenHamletite   = FLUIDS.register("molten_hamletite", hotBuilder().temperature(1000), Material.LAVA, 4);
+    public static final FluidObject<ForgeFlowingFluid> moltenRosenquartz   = FLUIDS.register("molten_rosenquartz", hotBuilder().temperature(1000), Material.LAVA, 10);
+    public static final FluidObject<ForgeFlowingFluid> moltenGildedfern   = FLUIDS.register("molten_gildedfern", hotBuilder().temperature(1000), Material.LAVA, 10);
 
     private static FluidAttributes.Builder hotBuilder() {
         return ModelFluidAttributes.builder().density(2000).viscosity(10000).temperature(1000).sound(SoundEvents.ITEM_BUCKET_FILL_LAVA, SoundEvents.ITEM_BUCKET_EMPTY_LAVA);

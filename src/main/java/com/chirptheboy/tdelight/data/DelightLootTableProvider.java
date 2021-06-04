@@ -26,11 +26,11 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.registries.ForgeRegistries;
 import com.chirptheboy.tdelight.TDelight;
 
-public class EnergisticsLootTableProvider extends LootTableProvider {
+public class DelightLootTableProvider extends LootTableProvider {
     private final List<Pair<Supplier<Consumer<BiConsumer<ResourceLocation, LootTable.Builder>>>, LootParameterSet>> lootTables = ImmutableList
-            .of(Pair.of(EnergisticsLootTableProvider.BlockLootTableProvider::new, LootParameterSets.BLOCK));
+            .of(Pair.of(DelightLootTableProvider.BlockLootTableProvider::new, LootParameterSets.BLOCK));
 
-    public EnergisticsLootTableProvider(DataGenerator dataGeneratorIn) {
+    public DelightLootTableProvider(DataGenerator dataGeneratorIn) {
         super(dataGeneratorIn);
     }
 
