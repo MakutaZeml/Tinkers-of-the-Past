@@ -1,5 +1,6 @@
 package com.chirptheboy.tdelight.tools;
 
+import com.chirptheboy.tdelight.TDelight;
 import com.google.common.collect.ImmutableSet;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.material.Material;
@@ -45,7 +46,11 @@ public class MaceTool extends ToolCore {
         boolean hit = super.dealDamage(tool, living, targetEntity, damage, isCritical, fullyCharged);
 
         // Apply knockback strength on target
-        ((LivingEntity) targetEntity).applyKnockback(knockbackStrength, MathHelper.sin(living.rotationYaw * ((float) Math.PI / 180F)), -MathHelper.cos(living.rotationYaw * ((float) Math.PI / 180F)));
+        try {
+            ((LivingEntity) targetEntity).applyKnockback(knockbackStrength, MathHelper.sin(living.rotationYaw * ((float) Math.PI / 180F)), -MathHelper.cos(living.rotationYaw * ((float) Math.PI / 180F)));
+        } catch (Exception e){
+            TDelight.log.error("Error when trying to apply knockback on target entity:" + e);
+        }
 
         // Todo: make a new sound for the 'bonk'
         living.world.playSound(null, living.getPosX(), living.getPosY(), living.getPosZ(), SoundEvents.ENTITY_PLAYER_ATTACK_SWEEP, living.getSoundCategory(), 1.0F, 1.0F);

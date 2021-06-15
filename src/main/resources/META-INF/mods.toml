@@ -5,7 +5,7 @@ issueTrackerURL="https://gitlab.com/ChirpTheBoy/TinkersDelight/issues" #optional
 [[mods]] #mandatory
 modId="tdelight" #mandatory
 version="${version}" #mandatory
-displayName="Tinkers' Delight" #mandatory
+displayName="Tinker's Delight" #mandatory
 #updateJSONURL="https://change.me.example.invalid/updates.json" #optional
 displayURL="https://gitlab.com/ChirpTheBoy/TinkersDelight" #optional
 #logoFile="tdelight.png" #optional

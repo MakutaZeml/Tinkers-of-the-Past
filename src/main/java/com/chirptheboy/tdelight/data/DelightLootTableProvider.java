@@ -1,5 +1,18 @@
 package com.chirptheboy.tdelight.data;
 
+import com.chirptheboy.tdelight.TDelight;
+import com.chirptheboy.tdelight.shared.DelightMaterials;
+import com.google.common.collect.ImmutableList;
+import com.mojang.datafixers.util.Pair;
+import net.minecraft.block.Block;
+import net.minecraft.data.DataGenerator;
+import net.minecraft.data.LootTableProvider;
+import net.minecraft.data.loot.BlockLootTables;
+import net.minecraft.loot.*;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.registries.ForgeRegistries;
+
+import javax.annotation.Nonnull;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -7,24 +20,6 @@ import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
-
-import javax.annotation.Nonnull;
-
-import com.google.common.collect.ImmutableList;
-import com.mojang.datafixers.util.Pair;
-
-import net.minecraft.block.Block;
-import net.minecraft.data.DataGenerator;
-import net.minecraft.data.LootTableProvider;
-import net.minecraft.data.loot.BlockLootTables;
-import net.minecraft.loot.LootParameterSet;
-import net.minecraft.loot.LootParameterSets;
-import net.minecraft.loot.LootTable;
-import net.minecraft.loot.LootTableManager;
-import net.minecraft.loot.ValidationTracker;
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.registries.ForgeRegistries;
-import com.chirptheboy.tdelight.TDelight;
 
 public class DelightLootTableProvider extends LootTableProvider {
     private final List<Pair<Supplier<Consumer<BiConsumer<ResourceLocation, LootTable.Builder>>>, LootParameterSet>> lootTables = ImmutableList
@@ -47,7 +42,7 @@ public class DelightLootTableProvider extends LootTableProvider {
 
     @Override
     public String getName() {
-        return "Tinkers' Delight Loot Tables";
+        return "Tinker's Delight Loot Tables";
     }
 
     public static class BlockLootTableProvider extends BlockLootTables {
@@ -61,17 +56,16 @@ public class DelightLootTableProvider extends LootTableProvider {
                     .collect(Collectors.toList());
         }
 
-/*
         @Override
         protected void addTables() {
             addCommon();
         }
-*/
 
-/*        private void addCommon() {
-            this.registerDropSelfLootTable(TDelight.charger.get());
-            this.registerLootTable(TDelight.placedToolBlock.get(), BlockLootTables.blockNoDrop());
+        private void addCommon() {
+            this.registerDropSelfLootTable(DelightMaterials.hamletite.get());
+            this.registerDropSelfLootTable(DelightMaterials.rosenquartz.get());
+            this.registerDropSelfLootTable(DelightMaterials.gildedfern.get());
         }
-*/
+
     }
 }

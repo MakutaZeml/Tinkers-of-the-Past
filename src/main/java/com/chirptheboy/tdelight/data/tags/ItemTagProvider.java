@@ -2,25 +2,30 @@ package com.chirptheboy.tdelight.data.tags;
 
 import com.chirptheboy.tdelight.TDelight;
 import com.chirptheboy.tdelight.shared.DelightMaterials;
+import com.chirptheboy.tdelight.shared.DelightTags;
+import com.chirptheboy.tdelight.smeltery.DelightSmeltery;
+import com.chirptheboy.tdelight.tools.DelightToolParts;
+import com.chirptheboy.tdelight.tools.DelightTools;
 import net.minecraft.data.BlockTagsProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.ItemTagsProvider;
 import net.minecraft.data.TagsProvider;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import slimeknights.tconstruct.TConstruct;
 import slimeknights.tconstruct.common.TinkerTags;
 import slimeknights.tconstruct.common.registration.CastItemObject;
 import slimeknights.tconstruct.common.registration.MetalItemObject;
+import slimeknights.tconstruct.shared.block.SlimeType;
+import slimeknights.tconstruct.world.TinkerWorld;
 
 import java.util.function.Consumer;
 
 public class ItemTagProvider extends ItemTagsProvider {
 
-
     public ItemTagProvider(DataGenerator generatorIn, BlockTagsProvider blockTagProvider, ExistingFileHelper existingFileHelper) {
-        super(generatorIn, blockTagProvider, TConstruct.modID, existingFileHelper);
+        super(generatorIn, blockTagProvider, TDelight.modID, existingFileHelper);
     }
 
     @Override
@@ -41,24 +46,31 @@ public class ItemTagProvider extends ItemTagsProvider {
 
     private void addWorld(){
         // Register world stuff here
+        this.getOrCreateBuilder(DelightTags.Items.FERN)
+            .add(Items.FERN, Items.LARGE_FERN,
+                 TinkerWorld.slimeFern.get(SlimeType.EARTH).asItem(),
+                 TinkerWorld.slimeFern.get(SlimeType.BLOOD).asItem(),
+                 TinkerWorld.slimeFern.get(SlimeType.ICHOR).asItem(),
+                 TinkerWorld.slimeFern.get(SlimeType.ENDER).asItem(),
+                 TinkerWorld.slimeFern.get(SlimeType.SKY).asItem());
     }
 
     private void addParts() {
 
-        this.getOrCreateBuilder(TinkerTags.Items.TOOL_PARTS).add(TDelight.maceHead.get());
+        this.getOrCreateBuilder(TinkerTags.Items.TOOL_PARTS).add(DelightToolParts.maceHead.get());
     }
 
     private void addTools() {
         this.getOrCreateBuilder(TinkerTags.Items.MULTIPART_TOOL)
-                .add(TDelight.mace.get());
+                .add(DelightTools.mace.get());
         this.getOrCreateBuilder(TinkerTags.Items.AOE)
-                .add(TDelight.mace.get());
+                .add(DelightTools.mace.get());
         this.getOrCreateBuilder(TinkerTags.Items.HARVEST)
-                .add(TDelight.mace.get());
+                .add(DelightTools.mace.get());
         this.getOrCreateBuilder(TinkerTags.Items.MELEE)
-                .add(TDelight.mace.get());
+                .add(DelightTools.mace.get());
         this.getOrCreateBuilder(TinkerTags.Items.STONE_HARVEST)
-                .add(TDelight.mace.get());
+                .add(DelightTools.mace.get());
     }
 
     private void addSmeltery() {
@@ -80,7 +92,7 @@ public class ItemTagProvider extends ItemTagsProvider {
         };
 
         // Todo: Add casts for tool parts here
-        addCast.accept(TDelight.maceHeadCast);
+        addCast.accept(DelightSmeltery.maceHeadCast);
     }
 
     /**

@@ -1,8 +1,0 @@
-{
-  "type": "tconstruct:part_builder",
-  "pattern": "tdelight:mace_head",
-  "cost": 4,
-  "result": {
-    "item": "tdelight:mace_head"
-  }
-}

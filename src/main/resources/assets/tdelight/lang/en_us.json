@@ -1,24 +1,60 @@
 {
-    "item.tdelight.tinkers_handbook": "Tinkers' Handbook",
-    "item.tdelight.miraculous_machinery.tooltip": "It reads good.",
-    
+    "_comment": "Items",
+    "item.tdelight.tinkers_handbook": "Tinker's Handbook",
+    "item.tdelight.tinkers_handbook.tooltip": "It reads good.",
+
+    "_comment": "Misc",
     "tdelight.attribute.name.generic.fake_harvest_speed": "Mining Speed",
-    
+
+    "_comment": "Hamletite",
+    "material.tdelight.hamletite": "Hamletite",
+    "block.tdelight.hamletite_block": "Block of Hamletite",
+    "block.tdelight.hamletite_block.tooltip": "Can be used as beacon base",
+    "item.tdelight.hamletite_ingot": "Hamletite Ingot",
+    "item.tdelight.hamletite_nugget": "Hamletite Nugget",
+    "block.tdelight.molten_hamletite_fluid": "Molten Hamletite",
+    "fluid.tdelight.molten_hamletite": "Molten Hamletite",
+    "fluid.tdelight.flowing_molten_hamletite": "Flowing Molten Hamletite",
+    "item.tdelight.molten_hamletite_bucket": "Molten Hamletite Bucket",
+
+    "_comment": "Rosenquartz",
+    "material.tdelight.rosenquartz": "Rosenquartz",
+    "block.tdelight.rosenquartz_block": "Block of Rosenquartz",
+    "block.tdelight.rosenquartz_block.tooltip": "Can be used as beacon base",
+    "item.tdelight.rosenquartz_ingot": "Rosenquartz Ingot",
+    "item.tdelight.rosenquartz_nugget": "Rosenquartz Nugget",
+    "block.tdelight.molten_rosenquartz_fluid": "Molten Rosenquartz",
+    "fluid.tdelight.molten_rosenquartz": "Molten Rosenquartz",
+    "fluid.tdelight.flowing_molten_rosenquartz": "Flowing Molten Rosenquartz",
+    "item.tdelight.molten_rosenquartz_bucket": "Molten Rosenquartz Bucket",
+
+    "_comment": "Gildedfern",
+    "material.tdelight.gildedfern": "Gildedfern",
+    "block.tdelight.gildedfern_block": "Block of Gildedfern",
+    "block.tdelight.gildedfern_block.tooltip": "Can be used as beacon base",
+    "item.tdelight.gildedfern_ingot": "Gildedfern Ingot",
+    "item.tdelight.gildedfern_nugget": "Gildedfern Nugget",
+    "block.tdelight.molten_gildedfern_fluid": "Molten Gildedfern",
+    "fluid.tdelight.molten_gildedfern": "Molten Gildedfern",
+    "fluid.tdelight.flowing_molten_gildedfern": "Flowing Molten Gildedfern",
+    "item.tdelight.molten_gildedfern_bucket": "Molten Gildedfern Bucket",
+
+    "_comment": "Tools",
     "item.tdelight.mace": "Mace",
     "item.tdelight.mace.description":"The mace is a powerful, single-handed weapon, applying extra knockback.",
-    
+
+    "_comment": "Tool parts",
     "item.tdelight.mace_head": "Mace Head",
-    
+
+    "_comment": "Casts",
     "item.tdelight.mace_head_cast": "Mace Head Gold Cast",
     "item.tdelight.mace_head_sand_cast": "Mace Head Sand Cast",
     "item.tdelight.mace_head_red_sand_cast": "Mace Head Red Sand Cast",
-    
-    "modifier.tdelight.voracious": "Voracious",
-    "modifier.tdelight.voracious.flavor": "Hungry for more.",
-    "modifier.tdelight.voracious.description": "Increases the weapon's attack with each kill.",
-    "modifier.tdelight.voracious_trait": "Voracious",
-    "modifier.tdelight.voracious_trait.flavor": "Hungry for more.",
-    "modifier.tdelight.voracious_trait.description": "Increases the weapon's attack with each kill.",
-    "modifier.tdelight.voracious.extra_tooltip1": "Kills: %s",
-    "modifier.tdelight.voracious.extra_tooltip2": "Bonus: %s"
+
+    "_comment": "Modifiers",
+    "modifier.tdelight.vengeful": "Vengeful",
+    "modifier.tdelight.vengeful.flavor": "Hungry for more.",
+    "modifier.tdelight.vengeful.description": "Increases the weapon's attack with each kill.",
+    "modifier.tdelight.vengeful.extra_tooltip_kills": "Kills: %s",
+    "modifier.tdelight.vengeful.extra_tooltip_bonus": "Bonus: %s"
 }
