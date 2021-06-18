@@ -22,6 +22,6 @@ Please log any issues or feature requests on the [Gitlab issue tracker](https://
 ## Modpack makers
 - Feel free to include this in your modpacks
 
-##Special thanks
+## Special thanks
 - [Slimeknights](https://github.com/SlimeKnights/) - Authors of [Tinkers Construct](https://www.curseforge.com/minecraft/mc-mods/tinkers-construct) and [Mantle](https://www.curseforge.com/minecraft/mc-mods/mantle)
 - [Princess of Evil](https://www.curseforge.com/members/princessofevil/projects) - For code references
