@@ -1,3 +1,7 @@
+![Availability](http://cf.way2muchnoise.eu/versions/490440.svg) ![Downloads](http://cf.way2muchnoise.eu/full_490440_downloads.svg)
+
+### Download on Curseforge: https://www.curseforge.com/minecraft/mc-mods/tinkers-delight
+
 This mod is an add-on to Tinkers' Construct for 1.16, and is a work-in-progress. It currently adds a new weapon, three new materials, and one new trait.
 
 ## Weapons
