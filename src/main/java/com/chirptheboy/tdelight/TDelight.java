@@ -12,6 +12,7 @@ import com.chirptheboy.tdelight.shared.DelightMaterials;
 import com.chirptheboy.tdelight.smeltery.DelightSmeltery;
 import com.chirptheboy.tdelight.tools.DelightToolParts;
 import com.chirptheboy.tdelight.tools.DelightTools;
+import com.chirptheboy.tdelight.config.Config;
 import net.minecraft.client.renderer.color.IItemColor;
 import net.minecraft.client.renderer.color.ItemColors;
 import net.minecraft.data.DataGenerator;
@@ -69,6 +70,7 @@ public class TDelight {
 
     public TDelight() {
         instance = this;
+        Config.init();
         initRegisters();
 
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
