@@ -21,6 +21,7 @@ public class VengefulModifier extends SingleUseModifier {
     private static final float BASE_KILL_MULTIPLIER = .05F;
     private static final ResourceLocation KILLCOUNT_KEY = new ResourceLocation(TDelight.modID, "killcount");
     private static final ResourceLocation BONUS_KEY = new ResourceLocation(TDelight.modID, "bonus");
+    private static int bonusCap = Config.COMMON.vengefulDamageCap.get();
 
     public VengefulModifier() {
         super(0x8c0618);
@@ -37,7 +38,7 @@ public class VengefulModifier extends SingleUseModifier {
         // Checks that the target is dead, it happened on the server world, the target's last attacker was a player
         // and that the player had this weapon type in its main or off hand (I think only main hand works, but who knows)
         if (!target.isAlive() && attacker.isServerWorld() && target.getLastDamageSource().getTrueSource() instanceof PlayerEntity &&
-                attacker.getHeldItemMainhand().getItem() == tool.getItem() || attacker.getHeldItemOffhand().getItem() == tool.getItem()){
+                (attacker.getHeldItemMainhand().getItem() == tool.getItem() || attacker.getHeldItemOffhand().getItem() == tool.getItem())){
 
             // bonusCap      = The config value. Will be 0 for no cap, or a positive int.
             // thisKillBonus = The bonus amount calculated based on the mob's health.
@@ -45,7 +46,6 @@ public class VengefulModifier extends SingleUseModifier {
             // bonus         = The value stored in the tool, which can be capped
 
             int killCount = getKillcount(tool);
-            int bonusCap = Config.COMMON.vengefulDamageCap.get();
             float bonus = getBonus(tool);
             float health = target.getMaxHealth();
             killCount += 1;
