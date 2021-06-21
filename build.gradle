@@ -26,7 +26,7 @@ apply plugin: 'maven-publish'
 //apply plugin: "io.freefair.lombok"
 apply plugin: 'org.spongepowered.mixin'
 
-version = mod_version
+version = "${minecraft_base_version}-${mod_version}"
 group = 'com.chirptheboy'
 archivesBaseName = 'TinkersDelight'
 
@@ -135,18 +135,10 @@ mixin {
    disableAnnotationProcessorCheck()
 }
 
-ext.artifact_version = 'NFG'
-if (System.getenv().ARTIFACT_VERSION == null) {
-    artifact_version = "${mod_version}"
-}
-if (System.getenv().ARTIFACT_VERSION != null) {
-    artifact_version = "${system.getenv().ARTIFACT_VERSION}"
-}
-
 def modsTomlSpec = copySpec{
     from(sourceSets.main.resources) {
         include 'META-INF/mods.toml'
-        expand 'version': artifact_version,
+        expand 'version': version,
             'loader_range': loader_range,
             'minecraft_range': minecraft_range,
             'forge_range': forge_range,
