@@ -16,6 +16,9 @@ Three new materials, all created with the Tinkers Smeltery. Alas poor Yorick, yo
 ## Traits
 **Vengeful** - The more kills you make with a tool, the higher the attack damage bonus.
 
+## Configurations
+- vengefulDamageCap: applies a cap to the damage bonus for a weapon with Vengeful trait. Default is 0 (no cap).
+
 ## Mod issues
 Please log any issues or feature requests on the [Gitlab issue tracker](https://gitlab.com/chirptheboy/tinkers-delight/-/issues).
 

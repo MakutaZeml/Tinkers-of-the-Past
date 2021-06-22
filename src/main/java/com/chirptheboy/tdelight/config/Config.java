@@ -22,13 +22,31 @@ public class Config {
                     .define("vengefulDamageCap", 0);
             builder.pop();
         }
+    }/**
+     * Client specific configuration - only loaded clientside from tconstruct-client.toml
+     */
+    public static class Client {
+
+        Client(ForgeConfigSpec.Builder builder) {
+            builder.comment("Client only settings").push("client");
+            builder.pop();
+        }
+    }
+
+    public static final ForgeConfigSpec clientSpec;
+    public static final Client CLIENT;
+
+    static {
+        final Pair<Client, ForgeConfigSpec> specPair = new ForgeConfigSpec.Builder().configure(Client::new);
+        clientSpec = specPair.getRight();
+        CLIENT = specPair.getLeft();
     }
 
     public static final ForgeConfigSpec commonSpec;
-    public static final Config.Common COMMON;
+    public static final Common COMMON;
 
     static {
-        final Pair<com.chirptheboy.tdelight.config.Config.Common, ForgeConfigSpec> specPair = new ForgeConfigSpec.Builder().configure(Config.Common::new);
+        final Pair<Common, ForgeConfigSpec> specPair = new ForgeConfigSpec.Builder().configure(Config.Common::new);
         commonSpec = specPair.getRight();
         COMMON = specPair.getLeft();
     }
@@ -36,5 +54,10 @@ public class Config {
     /** Registers any relevant listeners for config */
     public static void init() {
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, com.chirptheboy.tdelight.config.Config.commonSpec);
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, com.chirptheboy.tdelight.config.Config.clientSpec);
+
+        //IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+        //bus.addListener(com.chirptheboy.tdelight.config.Config::configChanged);
     }
+
 }
