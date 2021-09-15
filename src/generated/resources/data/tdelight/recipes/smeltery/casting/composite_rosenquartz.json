@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "item": "minecraft:quartz"
+  },
+  "cast_consumed": true,
+  "fluid": {
+    "tag": "tconstruct:molten_rose_gold",
+    "amount": 144
+  },
+  "result": "tdelight:rosenquartz_ingot",
+  "cooling_time": 52
+}

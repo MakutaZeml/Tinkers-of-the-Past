@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:ingots/hamletite",
+    "#forge:ingots/rosenquartz",
+    "#forge:ingots/gildedfern"
+  ]
+}

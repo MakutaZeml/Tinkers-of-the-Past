@@ -8,18 +8,17 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
+import net.minecraftforge.common.ToolType;
 import slimeknights.tconstruct.library.tools.ToolDefinition;
 import slimeknights.tconstruct.library.tools.helper.ToolHarvestLogic;
-import slimeknights.tconstruct.library.tools.item.ToolCore;
+import slimeknights.tconstruct.library.tools.item.ToolItem;
 import slimeknights.tconstruct.library.tools.nbt.IModifierToolStack;
-import slimeknights.tconstruct.library.tools.nbt.ToolStack;
 
-public class MaceTool extends ToolCore {
-    //public static final ToolType TOOL_TYPE = ToolType.get("mace");
+public class MaceTool extends ToolItem {
+    public static final ToolType TOOL_TYPE = ToolType.get("mace");
     public static final ImmutableSet<Material> EFFECTIVE_MATERIALS = ImmutableSet.of(Material.WEB, Material.TALL_PLANTS, Material.CORAL, Material.GOURD, Material.LEAVES);
     public static final ToolHarvestLogic HARVEST_LOGIC = new HarvestLogic();
 
@@ -27,7 +26,7 @@ public class MaceTool extends ToolCore {
         super(properties, toolDefinition);
     }
 
-    protected float knockbackStrength = 1.2F;
+    //protected float knockbackStrength = 1.2F;
 
     @Override
     public ToolHarvestLogic getToolHarvestLogic() {
@@ -39,26 +38,22 @@ public class MaceTool extends ToolCore {
         return !player.isCreative();
     }
 
-    // Apply knockback bonus
+    /*  Removed this since we gave the mace the modifier Knockback II in the tool definition
+
     @Override
-    public boolean dealDamage(ToolStack tool, LivingEntity living, Entity targetEntity, float damage, boolean isCritical, boolean fullyCharged) {
-        // Deal damage first
-        boolean hit = super.dealDamage(tool, living, targetEntity, damage, isCritical, fullyCharged);
+    public boolean onLeftClickEntity(ItemStack stack, PlayerEntity player, Entity entity) {
 
         // Apply knockback strength on target
         try {
-            ((LivingEntity) targetEntity).applyKnockback(knockbackStrength, MathHelper.sin(living.rotationYaw * ((float) Math.PI / 180F)), -MathHelper.cos(living.rotationYaw * ((float) Math.PI / 180F)));
+            ((LivingEntity) entity).applyKnockback(knockbackStrength, MathHelper.sin(entity.rotationYaw * ((float) Math.PI / 180F)), -MathHelper.cos(entity.rotationYaw * ((float) Math.PI / 180F)));
         } catch (Exception e){
             TDelight.log.error("Error when trying to apply knockback on target entity:" + e);
         }
 
-        // Todo: make a new sound for the 'bonk'
-        living.world.playSound(null, living.getPosX(), living.getPosY(), living.getPosZ(), SoundEvents.ENTITY_PLAYER_ATTACK_SWEEP, living.getSoundCategory(), 1.0F, 1.0F);
-        if (living instanceof PlayerEntity) {
-            ((PlayerEntity) living).spawnSweepParticles();
-        }
-        return hit;
+        return super.onLeftClickEntity(stack, player, entity);
     }
+    */
+
 
     /** Harvest logic for swords */
     public static class HarvestLogic extends ToolHarvestLogic {

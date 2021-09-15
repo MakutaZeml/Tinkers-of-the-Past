@@ -2,18 +2,16 @@ package com.chirptheboy.tdelight.modifiers;
 
 import com.chirptheboy.tdelight.TDelight;
 import com.chirptheboy.tdelight.config.Config;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.Color;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
 import slimeknights.tconstruct.library.modifiers.SingleUseModifier;
+import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
 import slimeknights.tconstruct.library.tools.nbt.IModifierToolStack;
 
 import java.util.List;
-
-import static slimeknights.tconstruct.TConstruct.random;
 
 public class VengefulModifier extends SingleUseModifier {
     private static final String TOOLTIP_KILLS_KEY = "modifier.tdelight.vengeful.extra_tooltip_kills";
@@ -32,12 +30,12 @@ public class VengefulModifier extends SingleUseModifier {
     }
 
     @Override
-    public int afterLivingHit(IModifierToolStack tool, int level, LivingEntity attacker, LivingEntity target, float damageDealt, boolean isCritical, float cooldown) {
+    public int afterEntityHit(IModifierToolStack tool, int level, ToolAttackContext context, float damageDealt) {
 
         // Checks that the target is dead, it happened on the server world, the target's last attacker was a player
         // and that the player had this weapon type in its main or off hand (I think only main hand works, but who knows)
-        if (!target.isAlive() && attacker.isServerWorld() && target.getLastDamageSource().getTrueSource() instanceof PlayerEntity &&
-                attacker.getHeldItemMainhand().getItem() == tool.getItem() || attacker.getHeldItemOffhand().getItem() == tool.getItem()){
+        if (!context.getLivingTarget().isAlive() && context.getPlayerAttacker().isServerWorld() && context.getLivingTarget().getLastDamageSource().getTrueSource() instanceof PlayerEntity &&
+                context.getPlayerAttacker().getHeldItemMainhand().getItem() == tool.getItem() || context.getPlayerAttacker().getHeldItemOffhand().getItem() == tool.getItem()){
 
             // bonusCap      = The config value. Will be 0 for no cap, or a positive int.
             // thisKillBonus = The bonus amount calculated based on the mob's health.
@@ -47,9 +45,9 @@ public class VengefulModifier extends SingleUseModifier {
             int killCount = getKillcount(tool);
             int bonusCap = Config.COMMON.vengefulDamageCap.get();
             float bonus = getBonus(tool);
-            float health = target.getMaxHealth();
+            float health = context.getLivingTarget().getMaxHealth();
             killCount += 1;
-            float thisKillBonus = Math.round(random.nextFloat() * health * 100) / 25000f;
+            float thisKillBonus = Math.round(RANDOM.nextFloat() * health * 100) / 25000f;
             float newBonus = Math.round((bonus + thisKillBonus + BASE_KILL_MULTIPLIER) * 100f) / 100f;
 
             // Bonus cap is set AND the cap will be hit
@@ -62,7 +60,7 @@ public class VengefulModifier extends SingleUseModifier {
             tool.getPersistentData().putInt(KILLCOUNT_KEY, killCount);
             tool.getPersistentData().putFloat(BONUS_KEY, bonus);
         }
-        return super.afterLivingHit(tool, level, attacker, target, damageDealt, isCritical, cooldown);
+        return super.afterEntityHit(tool, level, context, damageDealt);
     }
 
     public int getKillcount(IModifierToolStack tool) {
@@ -82,12 +80,11 @@ public class VengefulModifier extends SingleUseModifier {
     }
 
     @Override
-    public float applyLivingDamage(IModifierToolStack tool, int level, LivingEntity attacker, LivingEntity target, float baseDamage, float damage, boolean isCritical, boolean fullyCharged) {
-        if (attacker.isServerWorld()) {
+    public float getEntityDamage(IModifierToolStack tool, int level, ToolAttackContext context, float baseDamage, float damage) {
+        if (context.getLivingTarget().isServerWorld()) {
             float bonus = getBonus(tool);
             damage += bonus;
         }
         return damage;
     }
-
 }

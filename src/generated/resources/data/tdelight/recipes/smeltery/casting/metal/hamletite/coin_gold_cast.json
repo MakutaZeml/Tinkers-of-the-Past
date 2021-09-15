@@ -1,0 +1,23 @@
+{
+  "type": "tconstruct:casting_table",
+  "conditions": [
+    {
+      "value": {
+        "tag": "forge:coins/hamletite",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
+    }
+  ],
+  "cast": {
+    "tag": "tconstruct:casts/multi_use/coin"
+  },
+  "fluid": {
+    "tag": "tdelight:molten_hamletite",
+    "amount": 48
+  },
+  "result": {
+    "tag": "forge:coins/hamletite"
+  },
+  "cooling_time": 33
+}

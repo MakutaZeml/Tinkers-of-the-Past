@@ -1,0 +1,23 @@
+{
+  "type": "tconstruct:casting_table",
+  "conditions": [
+    {
+      "value": {
+        "tag": "forge:gears/gildedfern",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
+    }
+  ],
+  "cast": {
+    "tag": "tconstruct:casts/multi_use/gear"
+  },
+  "fluid": {
+    "tag": "tdelight:molten_gildedfern",
+    "amount": 576
+  },
+  "result": {
+    "tag": "forge:gears/gildedfern"
+  },
+  "cooling_time": 114
+}

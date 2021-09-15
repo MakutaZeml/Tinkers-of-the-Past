@@ -1,0 +1,21 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "value": {
+        "tag": "forge:rods/rosenquartz",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
+    }
+  ],
+  "ingredient": {
+    "tag": "forge:rods/rosenquartz"
+  },
+  "result": {
+    "fluid": "tdelight:molten_rosenquartz",
+    "amount": 72
+  },
+  "temperature": 700,
+  "time": 11
+}

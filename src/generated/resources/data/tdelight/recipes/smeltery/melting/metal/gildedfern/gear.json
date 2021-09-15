@@ -1,0 +1,21 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "value": {
+        "tag": "forge:gears/gildedfern",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
+    }
+  ],
+  "ingredient": {
+    "tag": "forge:gears/gildedfern"
+  },
+  "result": {
+    "fluid": "tdelight:molten_gildedfern",
+    "amount": 576
+  },
+  "temperature": 700,
+  "time": 114
+}

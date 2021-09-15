@@ -66,6 +66,5 @@ public class DelightLootTableProvider extends LootTableProvider {
             this.registerDropSelfLootTable(DelightMaterials.rosenquartz.get());
             this.registerDropSelfLootTable(DelightMaterials.gildedfern.get());
         }
-
     }
 }

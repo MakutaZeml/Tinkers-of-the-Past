@@ -1,0 +1,11 @@
+{
+  "type": "tconstruct:casting_basin",
+  "fluid": {
+    "name": "tdelight:molten_gildedfern",
+    "amount": 1296
+  },
+  "result": {
+    "tag": "forge:storage_blocks/gildedfern"
+  },
+  "cooling_time": 171
+}

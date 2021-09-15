@@ -45,6 +45,7 @@
 
     "_comment": "Tool parts",
     "item.tdelight.mace_head": "Mace Head",
+    "pattern.tdelight.mace_head": "Mace Head",
 
     "_comment": "Casts",
     "item.tdelight.mace_head_cast": "Mace Head Gold Cast",

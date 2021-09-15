@@ -1,0 +1,15 @@
+{
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "tconstruct:casts/single_use/nugget"
+  },
+  "cast_consumed": true,
+  "fluid": {
+    "tag": "tdelight:molten_gildedfern",
+    "amount": 16
+  },
+  "result": {
+    "tag": "forge:nuggets/gildedfern"
+  },
+  "cooling_time": 19
+}

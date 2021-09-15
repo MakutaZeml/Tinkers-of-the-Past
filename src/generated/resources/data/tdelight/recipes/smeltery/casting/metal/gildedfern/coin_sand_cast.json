@@ -1,0 +1,24 @@
+{
+  "type": "tconstruct:casting_table",
+  "conditions": [
+    {
+      "value": {
+        "tag": "forge:coins/gildedfern",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
+    }
+  ],
+  "cast": {
+    "tag": "tconstruct:casts/single_use/coin"
+  },
+  "cast_consumed": true,
+  "fluid": {
+    "tag": "tdelight:molten_gildedfern",
+    "amount": 48
+  },
+  "result": {
+    "tag": "forge:coins/gildedfern"
+  },
+  "cooling_time": 33
+}

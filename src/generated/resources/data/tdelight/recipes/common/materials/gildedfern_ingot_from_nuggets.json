@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "tdelight:gildedfern_ingot",
+  "pattern": [
+    "###",
+    "#*#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "tag": "forge:nuggets/gildedfern"
+    },
+    "*": {
+      "item": "tdelight:gildedfern_nugget"
+    }
+  },
+  "result": {
+    "item": "tdelight:gildedfern_ingot"
+  }
+}

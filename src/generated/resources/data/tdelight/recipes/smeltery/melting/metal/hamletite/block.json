@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "forge:storage_blocks/hamletite"
+  },
+  "result": {
+    "fluid": "tdelight:molten_hamletite",
+    "amount": 1296
+  },
+  "temperature": 700,
+  "time": 171
+}

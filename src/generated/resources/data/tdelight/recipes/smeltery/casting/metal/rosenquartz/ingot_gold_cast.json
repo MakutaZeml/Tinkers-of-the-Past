@@ -1,0 +1,14 @@
+{
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "tconstruct:casts/multi_use/ingot"
+  },
+  "fluid": {
+    "tag": "tdelight:molten_rosenquartz",
+    "amount": 144
+  },
+  "result": {
+    "tag": "forge:ingots/rosenquartz"
+  },
+  "cooling_time": 57
+}

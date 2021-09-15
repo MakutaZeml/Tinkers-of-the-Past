@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "tdelight:hamletite_block",
+  "pattern": [
+    "###",
+    "#*#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "tag": "forge:ingots/hamletite"
+    },
+    "*": {
+      "item": "tdelight:hamletite_ingot"
+    }
+  },
+  "result": {
+    "item": "tdelight:hamletite_block"
+  }
+}

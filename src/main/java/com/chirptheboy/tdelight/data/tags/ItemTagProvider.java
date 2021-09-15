@@ -1,6 +1,7 @@
 package com.chirptheboy.tdelight.data.tags;
 
 import com.chirptheboy.tdelight.TDelight;
+import com.chirptheboy.tdelight.fluids.DelightFluids;
 import com.chirptheboy.tdelight.shared.DelightMaterials;
 import com.chirptheboy.tdelight.shared.DelightTags;
 import com.chirptheboy.tdelight.smeltery.DelightSmeltery;
@@ -12,6 +13,7 @@ import net.minecraft.data.ItemTagsProvider;
 import net.minecraft.data.TagsProvider;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
+import net.minecraft.tags.BlockTags;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import slimeknights.tconstruct.common.TinkerTags;
@@ -37,7 +39,7 @@ public class ItemTagProvider extends ItemTagsProvider {
         this.addSmeltery();
     }
 
-    private void addMaterials() {
+   private void addMaterials() {
 
         addMetalTags(DelightMaterials.hamletite);
         addMetalTags(DelightMaterials.rosenquartz);
@@ -100,6 +102,7 @@ public class ItemTagProvider extends ItemTagsProvider {
      * @param metal  Metal object
      */
     private void addMetalTags(MetalItemObject metal) {
+
         this.getOrCreateBuilder(metal.getIngotTag()).add(metal.getIngot());
         this.getOrCreateBuilder(Tags.Items.INGOTS).addTag(metal.getIngotTag());
         this.getOrCreateBuilder(metal.getNuggetTag()).add(metal.getNugget());

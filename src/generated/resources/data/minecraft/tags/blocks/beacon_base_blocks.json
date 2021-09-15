@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:storage_blocks/hamletite",
+    "#forge:storage_blocks/rosenquartz",
+    "#forge:storage_blocks/gildedfern"
+  ]
+}

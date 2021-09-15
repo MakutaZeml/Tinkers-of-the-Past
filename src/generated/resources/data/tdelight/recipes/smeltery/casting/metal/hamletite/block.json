@@ -1,0 +1,11 @@
+{
+  "type": "tconstruct:casting_basin",
+  "fluid": {
+    "name": "tdelight:molten_hamletite",
+    "amount": 1296
+  },
+  "result": {
+    "tag": "forge:storage_blocks/hamletite"
+  },
+  "cooling_time": 171
+}

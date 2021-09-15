@@ -16,8 +16,8 @@ public class MaterialTraitsDataProvider extends AbstractMaterialTraitDataProvide
     protected void addMaterialTraits() {
 
         addDefaultTraits(MaterialIds.hamletite,   DelightModifiers.vengeful.get());
-        addDefaultTraits(MaterialIds.rosenquartz, TinkerModifiers.empty.get());
-        addDefaultTraits(MaterialIds.gildedfern,  TinkerModifiers.empty.get());
+        addDefaultTraits(MaterialIds.gildedfern,  TinkerModifiers.tilling.get());
+        addDefaultTraits(MaterialIds.rosenquartz, TinkerModifiers.sharpness.get());
     }
 
     @Override

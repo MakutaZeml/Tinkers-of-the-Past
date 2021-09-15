@@ -1,16 +1,19 @@
 package com.chirptheboy.tdelight.data.tags;
 
+import com.chirptheboy.tdelight.TDelight;
 import com.chirptheboy.tdelight.fluids.DelightFluids;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.FluidTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import slimeknights.mantle.registration.object.FluidObject;
+import slimeknights.tconstruct.TConstruct;
 
 import javax.annotation.Nullable;
 
 public class FluidTagProvider extends FluidTagsProvider {
-    public FluidTagProvider(DataGenerator generatorIn, String modId, @Nullable ExistingFileHelper existingFileHelper) {
-        super(generatorIn, modId, existingFileHelper);
+
+    public FluidTagProvider(DataGenerator generatorIn, ExistingFileHelper existingFileHelper) {
+        super(generatorIn, TDelight.modID, existingFileHelper);
     }
 
     @Override

@@ -1,0 +1,23 @@
+{
+  "type": "tconstruct:casting_table",
+  "conditions": [
+    {
+      "value": {
+        "tag": "forge:gears/hamletite",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
+    }
+  ],
+  "cast": {
+    "tag": "tconstruct:casts/multi_use/gear"
+  },
+  "fluid": {
+    "tag": "tdelight:molten_hamletite",
+    "amount": 576
+  },
+  "result": {
+    "tag": "forge:gears/hamletite"
+  },
+  "cooling_time": 114
+}

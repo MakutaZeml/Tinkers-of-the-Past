@@ -55,9 +55,6 @@ public class Config {
     public static void init() {
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, com.chirptheboy.tdelight.config.Config.commonSpec);
         ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, com.chirptheboy.tdelight.config.Config.clientSpec);
-
-        //IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-        //bus.addListener(com.chirptheboy.tdelight.config.Config::configChanged);
     }
 
 }

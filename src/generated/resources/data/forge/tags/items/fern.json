@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:fern",
+    "minecraft:large_fern",
+    "tconstruct:earth_slime_fern",
+    "tconstruct:blood_slime_fern",
+    "tconstruct:ichor_slime_fern",
+    "tconstruct:ender_slime_fern",
+    "tconstruct:sky_slime_fern"
+  ]
+}

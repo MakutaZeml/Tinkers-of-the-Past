@@ -1,0 +1,23 @@
+{
+  "type": "tconstruct:casting_table",
+  "conditions": [
+    {
+      "value": {
+        "tag": "forge:coins/rosenquartz",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
+    }
+  ],
+  "cast": {
+    "tag": "tconstruct:casts/multi_use/coin"
+  },
+  "fluid": {
+    "tag": "tdelight:molten_rosenquartz",
+    "amount": 48
+  },
+  "result": {
+    "tag": "forge:coins/rosenquartz"
+  },
+  "cooling_time": 33
+}
