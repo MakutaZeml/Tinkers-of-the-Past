@@ -10,6 +10,7 @@ import net.minecraft.util.text.TranslationTextComponent;
 import slimeknights.tconstruct.library.modifiers.SingleUseModifier;
 import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
 import slimeknights.tconstruct.library.tools.nbt.IModifierToolStack;
+import slimeknights.tconstruct.library.utils.TooltipFlag;
 
 import java.util.List;
 
@@ -32,8 +33,8 @@ public class VengefulModifier extends SingleUseModifier {
     @Override
     public int afterEntityHit(IModifierToolStack tool, int level, ToolAttackContext context, float damageDealt) {
 
-        // Checks that the target is dead, it happened on the server world, the target's last attacker was a player
-        // and that the player had this weapon type in its main or off hand (I think only main hand works, but who knows)
+        /** Checks that the target is dead, it happened on the server world, the target's last attacker was a player
+            and that the player had this weapon type in its main or off hand (I think only main hand works, but who knows) */
         if (!context.getLivingTarget().isAlive() && context.getPlayerAttacker().isServerWorld() && context.getLivingTarget().getLastDamageSource().getTrueSource() instanceof PlayerEntity &&
                 context.getPlayerAttacker().getHeldItemMainhand().getItem() == tool.getItem() || context.getPlayerAttacker().getHeldItemOffhand().getItem() == tool.getItem()){
 
@@ -72,7 +73,7 @@ public class VengefulModifier extends SingleUseModifier {
     }
 
     @Override
-    public void addInformation(IModifierToolStack tool, int level, List<ITextComponent> tooltip, boolean isAdvanced, boolean detailed) {
+    public void addInformation(IModifierToolStack tool, int level, List<ITextComponent> tooltip, TooltipFlag tooltipFlag) {
         int killCount = getKillcount(tool);
         float bonus = getBonus(tool);
         tooltip.add(new TranslationTextComponent(TOOLTIP_KILLS_KEY, killCount).modifyStyle(style -> style.setColor(Color.fromInt(getColor()))));

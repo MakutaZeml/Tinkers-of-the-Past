@@ -21,7 +21,6 @@ public class DelightCommonRecipeProvider extends CommonRecipeProvider {
 
     @Override
     protected void registerRecipes(Consumer<IFinishedRecipe> consumer) {
-        //this.addCommonRecipes(consumer);
         this.addMaterialRecipes(consumer);
     }
 
@@ -33,11 +32,8 @@ public class DelightCommonRecipeProvider extends CommonRecipeProvider {
     private void addMaterialRecipes(Consumer<IFinishedRecipe> consumer) {
         String folder = "common/materials/";
 
-        TDelight.log.debug("Creating recipe for rosenquartz: " + DelightMaterials.rosenquartz.toString());
         metalCrafting(consumer, DelightMaterials.rosenquartz, folder);
-        TDelight.log.debug("Creating recipe for gildedfern: " + DelightMaterials.gildedfern.toString());
         metalCrafting(consumer, DelightMaterials.gildedfern, folder);
-        TDelight.log.debug("Creating recipe for hamletite: " + DelightMaterials.hamletite.toString());
         metalCrafting(consumer, DelightMaterials.hamletite, folder);
     }
 }

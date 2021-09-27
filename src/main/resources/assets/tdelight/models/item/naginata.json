@@ -1,0 +1,13 @@
+{
+  "loader": "tconstruct:tool",
+  "parent": "forge:item/default-tool",
+  "textures": {
+    "head":        "tdelight:item/tool/naginata/head",
+    "broken_head": "tdelight:item/tool/naginata/broken_head",
+    "handle":      "tdelight:item/tool/naginata/handle"
+  },
+  "parts": [
+    { "name": "handle",  "index": 1 },
+    { "name": "head",    "index": 0, "broken": "broken_head" }
+  ]
+}

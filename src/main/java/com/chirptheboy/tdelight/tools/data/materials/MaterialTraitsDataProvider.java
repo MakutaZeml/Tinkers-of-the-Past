@@ -1,4 +1,4 @@
-package com.chirptheboy.tdelight.tools.data;
+package com.chirptheboy.tdelight.tools.data.materials;
 
 import com.chirptheboy.tdelight.modifiers.DelightModifiers;
 import net.minecraft.data.DataGenerator;

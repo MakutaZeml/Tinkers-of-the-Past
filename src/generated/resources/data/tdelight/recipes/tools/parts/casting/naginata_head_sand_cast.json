@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:table_casting_material",
+  "cast": {
+    "tag": "tdelight:casts/single_use/naginata_head"
+  },
+  "cast_consumed": true,
+  "item_cost": 2,
+  "result": "tdelight:naginata_head"
+}

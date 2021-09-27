@@ -2,7 +2,7 @@
   "loader": "tconstruct:material",
   "parent": "forge:item/default",
   "textures": {
-    "texture": "tdelight:item/tool/mace_head"
+    "texture": "tdelight:item/tool/mace/head"
   },
   "offset": [-4, 3]
 }

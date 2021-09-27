@@ -1,4 +1,4 @@
-package com.chirptheboy.tdelight.tools.data;
+package com.chirptheboy.tdelight.tools.data.materials;
 
 import net.minecraft.data.DataGenerator;
 import slimeknights.tconstruct.library.data.material.AbstractMaterialDataProvider;
@@ -7,7 +7,7 @@ import slimeknights.tconstruct.tools.stats.ExtraMaterialStats;
 import slimeknights.tconstruct.tools.stats.HandleMaterialStats;
 import slimeknights.tconstruct.tools.stats.HeadMaterialStats;
 
-import static slimeknights.tconstruct.library.utils.HarvestLevels.*;
+import static slimeknights.tconstruct.library.utils.HarvestLevels.DIAMOND;
 import static slimeknights.tconstruct.library.utils.HarvestLevels.NETHERITE;
 
 public class MaterialStatsDataProvider extends AbstractMaterialStatsDataProvider {

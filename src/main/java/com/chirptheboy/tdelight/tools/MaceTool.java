@@ -1,15 +1,11 @@
 package com.chirptheboy.tdelight.tools;
 
-import com.chirptheboy.tdelight.TDelight;
 import com.google.common.collect.ImmutableSet;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.material.Material;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ToolType;
 import slimeknights.tconstruct.library.tools.ToolDefinition;
@@ -26,8 +22,6 @@ public class MaceTool extends ToolItem {
         super(properties, toolDefinition);
     }
 
-    //protected float knockbackStrength = 1.2F;
-
     @Override
     public ToolHarvestLogic getToolHarvestLogic() {
         return HARVEST_LOGIC;
@@ -37,23 +31,6 @@ public class MaceTool extends ToolItem {
     public boolean canPlayerBreakBlockWhileHolding(BlockState state, World worldIn, BlockPos pos, PlayerEntity player) {
         return !player.isCreative();
     }
-
-    /*  Removed this since we gave the mace the modifier Knockback II in the tool definition
-
-    @Override
-    public boolean onLeftClickEntity(ItemStack stack, PlayerEntity player, Entity entity) {
-
-        // Apply knockback strength on target
-        try {
-            ((LivingEntity) entity).applyKnockback(knockbackStrength, MathHelper.sin(entity.rotationYaw * ((float) Math.PI / 180F)), -MathHelper.cos(entity.rotationYaw * ((float) Math.PI / 180F)));
-        } catch (Exception e){
-            TDelight.log.error("Error when trying to apply knockback on target entity:" + e);
-        }
-
-        return super.onLeftClickEntity(stack, player, entity);
-    }
-    */
-
 
     /** Harvest logic for swords */
     public static class HarvestLogic extends ToolHarvestLogic {

@@ -1,5 +1,6 @@
-package com.chirptheboy.tdelight.tools.data;
+package com.chirptheboy.tdelight.tools.data.materials;
 
+import com.chirptheboy.tdelight.tools.data.materials.MaterialIds;
 import net.minecraft.data.DataGenerator;
 import slimeknights.tconstruct.library.data.material.AbstractMaterialDataProvider;
 

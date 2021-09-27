@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "#tdelight:casts/single_use/mace_head"
+    "#tdelight:casts/single_use/mace_head",
+    "#tdelight:casts/single_use/naginata_head"
   ]
 }

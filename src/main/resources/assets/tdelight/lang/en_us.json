@@ -41,21 +41,39 @@
 
     "_comment": "Tools",
     "item.tdelight.mace": "Mace",
-    "item.tdelight.mace.description":"The mace is a powerful, single-handed weapon, applying extra knockback.",
+    "item.tdelight.mace.description":"A single-handed weapon, applying extra knockback.",
+    "item.tdelight.naginata": "Naginata",
+    "item.tdelight.naginata.description":"It's a knife on a long pole.",
+    "item.tdelight.war_hammer": "War Hammer",
+    "item.tdelight.war_hammer.description":"It's slow, but it packs a punch.",
 
     "_comment": "Tool parts",
     "item.tdelight.mace_head": "Mace Head",
     "pattern.tdelight.mace_head": "Mace Head",
+    "item.tdelight.naginata_head": "Naginata Head",
+    "pattern.tdelight.naginata_head": "Naginata Head",
+    "item.tdelight.war_hammer_head": "War Hammer Head",
+    "pattern.tdelight.war_hammer_head": "War Hammer Head",
 
     "_comment": "Casts",
     "item.tdelight.mace_head_cast": "Mace Head Gold Cast",
     "item.tdelight.mace_head_sand_cast": "Mace Head Sand Cast",
     "item.tdelight.mace_head_red_sand_cast": "Mace Head Red Sand Cast",
 
+    "item.tdelight.war_hammer_head_cast": "War Hammer Head Gold Cast",
+    "item.tdelight.war_hammer_head_sand_cast": "War Hammer Head Sand Cast",
+    "item.tdelight.war_hammer_head_red_sand_cast": "War Hammer Head Red Sand Cast",
+    "item.tdelight.naginata_head_cast": "Naginata Head Gold Cast",
+    "item.tdelight.naginata_head_sand_cast": "Naginata Head Sand Cast",
+    "item.tdelight.naginata_head_red_sand_cast": "Naginata Head Red Sand Cast",
+
     "_comment": "Modifiers",
     "modifier.tdelight.vengeful": "Vengeful",
     "modifier.tdelight.vengeful.flavor": "Hungry for more.",
     "modifier.tdelight.vengeful.description": "Increases the weapon's attack with each kill.",
     "modifier.tdelight.vengeful.extra_tooltip_kills": "Kills: %s",
-    "modifier.tdelight.vengeful.extra_tooltip_bonus": "Bonus: %s"
+    "modifier.tdelight.vengeful.extra_tooltip_bonus": "Bonus: %s",
+    "modifier.tdelight.liftoff": "Liftoff",
+    "modifier.tdelight.liftoff.flavor": "Whoosh",
+    "modifier.tdelight.liftoff.description": "Blasts nearby enemies away."
 }

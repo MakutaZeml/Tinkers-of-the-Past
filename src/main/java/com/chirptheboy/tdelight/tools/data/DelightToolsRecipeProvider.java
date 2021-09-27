@@ -3,15 +3,13 @@ package com.chirptheboy.tdelight.tools.data;
 import com.chirptheboy.tdelight.data.DelightBaseRecipeProvider;
 import com.chirptheboy.tdelight.fluids.DelightFluids;
 import com.chirptheboy.tdelight.smeltery.DelightSmeltery;
-import com.chirptheboy.tdelight.tools.DelightToolParts;
-import com.chirptheboy.tdelight.tools.DelightTools;
+import com.chirptheboy.tdelight.tools.data.shared.DelightToolParts;
+import com.chirptheboy.tdelight.tools.data.shared.DelightTools;
+import com.chirptheboy.tdelight.tools.data.materials.MaterialIds;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.IFinishedRecipe;
-import slimeknights.tconstruct.fluids.TinkerFluids;
 import slimeknights.tconstruct.library.data.recipe.IMaterialRecipeHelper;
 import slimeknights.tconstruct.library.data.recipe.IToolRecipeHelper;
-import slimeknights.tconstruct.smeltery.TinkerSmeltery;
-import slimeknights.tconstruct.tools.TinkerToolParts;
 
 import java.util.function.Consumer;
 
@@ -38,6 +36,8 @@ public class DelightToolsRecipeProvider extends DelightBaseRecipeProvider implem
         String folder = "tools/building/";
 
         toolBuilding(consumer, DelightTools.mace, folder);
+        toolBuilding(consumer, DelightTools.naginata, folder);
+        toolBuilding(consumer, DelightTools.warHammer, folder);
     }
 
     private void addPartRecipes(Consumer<IFinishedRecipe> consumer) {
@@ -45,6 +45,7 @@ public class DelightToolsRecipeProvider extends DelightBaseRecipeProvider implem
         String castFolder = "smeltery/casts/";
 
         partRecipes(consumer, DelightToolParts.maceHead, DelightSmeltery.maceHeadCast, 2, partFolder, castFolder);
+        partRecipes(consumer, DelightToolParts.naginataHead, DelightSmeltery.naginataHeadCast, 2, partFolder, castFolder);
     }
 
     private void addMaterialsRecipes(Consumer<IFinishedRecipe> consumer) {

@@ -3,21 +3,22 @@ package com.chirptheboy.tdelight;
 import com.chirptheboy.tdelight.config.Config;
 import com.chirptheboy.tdelight.data.DelightLootTableProvider;
 import com.chirptheboy.tdelight.data.DelightRecipeProvider;
-import com.chirptheboy.tdelight.data.tags.FluidTagProvider;
-import com.chirptheboy.tdelight.fluids.DelightFluids;
-import com.chirptheboy.tdelight.smeltery.data.DelightSmelteryRecipeProvider;
 import com.chirptheboy.tdelight.data.tags.BlockTagProvider;
+import com.chirptheboy.tdelight.data.tags.FluidTagProvider;
 import com.chirptheboy.tdelight.data.tags.ItemTagProvider;
+import com.chirptheboy.tdelight.fluids.DelightFluids;
 import com.chirptheboy.tdelight.modifiers.DelightModifiers;
 import com.chirptheboy.tdelight.shared.DelightCommons;
 import com.chirptheboy.tdelight.shared.DelightMaterials;
 import com.chirptheboy.tdelight.smeltery.DelightSmeltery;
-import com.chirptheboy.tdelight.tools.DelightToolParts;
-import com.chirptheboy.tdelight.tools.DelightTools;
+import com.chirptheboy.tdelight.smeltery.data.DelightSmelteryRecipeProvider;
+import com.chirptheboy.tdelight.tools.data.shared.DelightToolParts;
+import com.chirptheboy.tdelight.tools.data.shared.DelightTools;
 import net.minecraft.client.renderer.color.IItemColor;
 import net.minecraft.client.renderer.color.ItemColors;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.item.crafting.IRecipeSerializer;
+import net.minecraft.potion.Effect;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.ColorHandlerEvent;
@@ -50,7 +51,7 @@ import slimeknights.tconstruct.library.tools.part.MaterialItem;
 import java.util.Optional;
 import java.util.function.Supplier;
 
-import static com.chirptheboy.tdelight.tools.DelightToolParts.maceHead;
+import static com.chirptheboy.tdelight.tools.data.shared.DelightToolParts.*;
 
 @Mod(TDelight.modID)
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -65,8 +66,10 @@ public class TDelight {
     public static final BlockDeferredRegisterExtension         BLOCKS             = new BlockDeferredRegisterExtension(TDelight.modID);
     public static final ItemDeferredRegisterExtension          ITEMS              = new ItemDeferredRegisterExtension(TDelight.modID);
     public static final FluidDeferredRegister                  FLUIDS             = new FluidDeferredRegister(TDelight.modID);
+    public static final DeferredRegister<Effect>               POTIONS            = DeferredRegister.create(ForgeRegistries.POTIONS, TDelight.modID);
     public static final DeferredRegister<Modifier>             MODIFIERS          = DeferredRegister.create(Modifier.class, TDelight.modID);
     public static final DeferredRegister<IRecipeSerializer<?>> RECIPE_SERIALIZERS = DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, TDelight.modID);
+
 
     public TDelight() {
         instance = this;
@@ -84,7 +87,6 @@ public class TDelight {
         bus.register(new DelightSmeltery()); //Todo: create for casts
 
         MinecraftForge.EVENT_BUS.register(this);
-        //DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> DelightClient::onConstruct);
     }
 
     public static ResourceLocation getResource(String name) {
@@ -96,6 +98,7 @@ public class TDelight {
         BLOCKS.register(bus);
         ITEMS.register(bus);
         FLUIDS.register(bus);
+        POTIONS.register(bus);
         RECIPE_SERIALIZERS.register(bus);
         MODIFIERS.register(bus);
     }
@@ -117,25 +120,21 @@ public class TDelight {
 
     @EventBusSubscriber(modid = modID, value = Dist.CLIENT, bus = Bus.MOD)
     public static class DelightClient {
-        /** Book was removed
-        @SubscribeEvent
-        static void clientSetup(final FMLClientSetupEvent event) {
-            FontRenderer unicode = CommonsClientEvents.unicodeFontRender();
-            DelightBookItem.DelightBook.TINKERS_HANDBOOK.fontRenderer = unicode;
-        }
-
-        public static void onConstruct() {
-            DelightBookItem.DelightBook.initBook();
-        }
-         */
 
         @SubscribeEvent
         static void itemColors(ColorHandlerEvent.Item event) {
 
             final ItemColors colors = event.getItemColors();
 
+            /** Register all the tools */
             registerToolItemColors(colors, DelightTools.mace);
+            registerToolItemColors(colors, DelightTools.naginata);
+            registerToolItemColors(colors, DelightTools.warHammer);
+
+            /** Register all the tool item parts */
             registerMaterialItemColors(colors, maceHead);
+            registerMaterialItemColors(colors, naginataHead);
+            //registerMaterialItemColors(colors, warHammerHead);
         }
 
         public static void registerMaterialItemColors(ItemColors colors, Supplier<? extends MaterialItem> item) {

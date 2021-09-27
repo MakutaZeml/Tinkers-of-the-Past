@@ -1,0 +1,8 @@
+{
+  "type": "tconstruct:part_builder",
+  "pattern": "tdelight:naginata_head",
+  "cost": 2,
+  "result": {
+    "item": "tdelight:naginata_head"
+  }
+}

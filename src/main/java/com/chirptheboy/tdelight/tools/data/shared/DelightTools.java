@@ -1,11 +1,14 @@
-package com.chirptheboy.tdelight.tools;
+package com.chirptheboy.tdelight.tools.data.shared;
 
 import com.chirptheboy.tdelight.TDelight;
 import com.chirptheboy.tdelight.data.DelightRecipeProvider;
+import com.chirptheboy.tdelight.tools.MaceTool;
+import com.chirptheboy.tdelight.tools.NaginataTool;
+import com.chirptheboy.tdelight.tools.WarHammerTool;
 import com.chirptheboy.tdelight.tools.data.DelightToolsRecipeProvider;
-import com.chirptheboy.tdelight.tools.data.MaterialDataProvider;
-import com.chirptheboy.tdelight.tools.data.MaterialStatsDataProvider;
-import com.chirptheboy.tdelight.tools.data.MaterialTraitsDataProvider;
+import com.chirptheboy.tdelight.tools.data.materials.MaterialDataProvider;
+import com.chirptheboy.tdelight.tools.data.materials.MaterialStatsDataProvider;
+import com.chirptheboy.tdelight.tools.data.materials.MaterialTraitsDataProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -30,6 +33,8 @@ public class DelightTools extends TinkerModule {
 
     /** Tools & weapons */
     public static final ItemObject<MaceTool> mace = TDelight.ITEMS.register("mace", () -> new MaceTool(TOOL.get().addToolType(MaceTool.TOOL_TYPE, 0), ToolDefinitions.MACE));
+    public static final ItemObject<NaginataTool> naginata = TDelight.ITEMS.register("naginata", () -> new NaginataTool(TOOL.get().addToolType(NaginataTool.TOOL_TYPE, 0), ToolDefinitions.NAGINATA));
+    public static final ItemObject<WarHammerTool> warHammer = TDelight.ITEMS.register("war_hammer", () -> new WarHammerTool(TOOL.get().addToolType(WarHammerTool.TOOL_TYPE, 0), ToolDefinitions.WAR_HAMMER));
 
     @SubscribeEvent
     void gatherData(final GatherDataEvent event) {

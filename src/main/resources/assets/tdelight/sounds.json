@@ -1,0 +1,7 @@
+{
+    "hammer_blow": {
+    "category": "player",
+    "sounds": [
+        "tdelight:hammer_blow"
+    ]}
+} 

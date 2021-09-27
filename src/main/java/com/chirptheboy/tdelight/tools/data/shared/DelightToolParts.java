@@ -1,4 +1,4 @@
-package com.chirptheboy.tdelight.tools;
+package com.chirptheboy.tdelight.tools.data.shared;
 
 import com.chirptheboy.tdelight.TDelight;
 import net.minecraft.item.Item;
@@ -30,4 +30,6 @@ public class DelightToolParts extends TinkerModule {
     private static final Item.Properties PARTS_PROPS = new Item.Properties().group(TAB_TOOL_PARTS);
 
     public static final ItemObject<ToolPartItem> maceHead = TDelight.ITEMS.register("mace_head", () -> new ToolPartItem(PARTS_PROPS, HeadMaterialStats.ID));
+    public static final ItemObject<ToolPartItem> naginataHead = TDelight.ITEMS.register("naginata_head", () -> new ToolPartItem(PARTS_PROPS, HeadMaterialStats.ID));
+    //public static final ItemObject<ToolPartItem> warHammerHead = TDelight.ITEMS.register("war_hammer_head", () -> new ToolPartItem(PARTS_PROPS, HeadMaterialStats.ID));
 }

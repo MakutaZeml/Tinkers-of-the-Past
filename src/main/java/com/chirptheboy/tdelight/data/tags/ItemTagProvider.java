@@ -1,19 +1,17 @@
 package com.chirptheboy.tdelight.data.tags;
 
 import com.chirptheboy.tdelight.TDelight;
-import com.chirptheboy.tdelight.fluids.DelightFluids;
 import com.chirptheboy.tdelight.shared.DelightMaterials;
 import com.chirptheboy.tdelight.shared.DelightTags;
 import com.chirptheboy.tdelight.smeltery.DelightSmeltery;
-import com.chirptheboy.tdelight.tools.DelightToolParts;
-import com.chirptheboy.tdelight.tools.DelightTools;
+import com.chirptheboy.tdelight.tools.data.shared.DelightToolParts;
+import com.chirptheboy.tdelight.tools.data.shared.DelightTools;
 import net.minecraft.data.BlockTagsProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.ItemTagsProvider;
 import net.minecraft.data.TagsProvider;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
-import net.minecraft.tags.BlockTags;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import slimeknights.tconstruct.common.TinkerTags;
@@ -40,7 +38,6 @@ public class ItemTagProvider extends ItemTagsProvider {
     }
 
    private void addMaterials() {
-
         addMetalTags(DelightMaterials.hamletite);
         addMetalTags(DelightMaterials.rosenquartz);
         addMetalTags(DelightMaterials.gildedfern);
@@ -58,19 +55,25 @@ public class ItemTagProvider extends ItemTagsProvider {
     }
 
     private void addParts() {
-
         this.getOrCreateBuilder(TinkerTags.Items.TOOL_PARTS).add(DelightToolParts.maceHead.get());
+        //this.getOrCreateBuilder(TinkerTags.Items.TOOL_PARTS).add(DelightToolParts.warHammerHead.get());
+        this.getOrCreateBuilder(TinkerTags.Items.TOOL_PARTS).add(DelightToolParts.naginataHead.get());
     }
 
     private void addTools() {
         this.getOrCreateBuilder(TinkerTags.Items.MULTIPART_TOOL)
-                .add(DelightTools.mace.get());
+                .add(DelightTools.mace.get())
+                .add(DelightTools.warHammer.get())
+                .add(DelightTools.naginata.get());
         this.getOrCreateBuilder(TinkerTags.Items.AOE)
-                .add(DelightTools.mace.get());
+                .add(DelightTools.mace.get())
+                .add(DelightTools.warHammer.get());
         this.getOrCreateBuilder(TinkerTags.Items.HARVEST)
                 .add(DelightTools.mace.get());
         this.getOrCreateBuilder(TinkerTags.Items.MELEE)
-                .add(DelightTools.mace.get());
+                .add(DelightTools.mace.get())
+                .add(DelightTools.warHammer.get())
+                .add(DelightTools.naginata.get());
         this.getOrCreateBuilder(TinkerTags.Items.STONE_HARVEST)
                 .add(DelightTools.mace.get());
     }
@@ -95,6 +98,8 @@ public class ItemTagProvider extends ItemTagsProvider {
 
         // Todo: Add casts for tool parts here
         addCast.accept(DelightSmeltery.maceHeadCast);
+        //addCast.accept(DelightSmeltery.warHammerHeadCast);
+        addCast.accept(DelightSmeltery.naginataHeadCast);
     }
 
     /**
@@ -102,7 +107,6 @@ public class ItemTagProvider extends ItemTagsProvider {
      * @param metal  Metal object
      */
     private void addMetalTags(MetalItemObject metal) {
-
         this.getOrCreateBuilder(metal.getIngotTag()).add(metal.getIngot());
         this.getOrCreateBuilder(Tags.Items.INGOTS).addTag(metal.getIngotTag());
         this.getOrCreateBuilder(metal.getNuggetTag()).add(metal.getNugget());

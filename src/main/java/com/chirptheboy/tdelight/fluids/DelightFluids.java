@@ -16,7 +16,7 @@ public class DelightFluids extends TinkerModule {
         ForgeMod.enableMilkFluid();
     }
 
-    // Shakespearean metals
+    // Shakenaginataean metals
     public static final FluidObject<ForgeFlowingFluid> moltenHamletite   = TDelight.FLUIDS.register("molten_hamletite",   hotBuilder().temperature(1000), Material.LAVA, 4);
     public static final FluidObject<ForgeFlowingFluid> moltenRosenquartz = TDelight.FLUIDS.register("molten_rosenquartz", hotBuilder().temperature(1000), Material.LAVA, 10);
     public static final FluidObject<ForgeFlowingFluid> moltenGildedfern  = TDelight.FLUIDS.register("molten_gildedfern",  hotBuilder().temperature(1000), Material.LAVA, 10);
