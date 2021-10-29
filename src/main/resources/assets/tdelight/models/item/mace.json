@@ -4,8 +4,8 @@
   "textures": {
     "head":        "tdelight:item/tool/mace/head",
     "broken_head": "tdelight:item/tool/mace/broken_head",
-    "handle":      "tconstruct:item/tool/pickaxe/handle",
-    "binding":     "tconstruct:item/tool/hand_axe/binding"
+    "handle":      "tdelight:item/tool/mace/handle",
+    "binding":     "tdelight:item/tool/mace/binding"
   },
   "parts": [
     { "name": "handle",  "index": 1 },

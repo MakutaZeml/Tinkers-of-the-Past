@@ -71,6 +71,11 @@ public class TDelight {
     public static final DeferredRegister<IRecipeSerializer<?>> RECIPE_SERIALIZERS = DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, TDelight.modID);
 
 
+    /**
+     * Hamletite: reduce strength overall
+     * Add book
+     */
+
     public TDelight() {
         instance = this;
         Config.init();

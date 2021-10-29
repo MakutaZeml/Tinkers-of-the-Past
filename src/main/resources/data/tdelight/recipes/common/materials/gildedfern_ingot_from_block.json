@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "tdelight:gildedfern_ingot",
+  "ingredients": [
+    {
+      "item": "tdelight:gildedfern_block"
+    }
+  ],
+  "result": {
+    "item": "tdelight:gildedfern_ingot",
+    "count": 9
+  }
+}

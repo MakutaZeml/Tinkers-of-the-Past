@@ -21,7 +21,7 @@ public class DelightMaterials extends TinkerModule {
 
     static {
         DELIGHT_GENERIC_METAL_BLOCK = builder(Material.IRON, ToolType.PICKAXE, SoundType.METAL).setRequiresTool().hardnessAndResistance(5.0F);;
-        DELIGHT_TAB_GENERAL = new SupplierItemGroup("tdelight", "general", () -> {
+        DELIGHT_TAB_GENERAL = new SupplierItemGroup(TDelight.modID, "general", () -> {
             return new ItemStack((IItemProvider) DelightMaterials.hamletite.get());
         });
         DELIGHT_GENERAL_PROPS = (new net.minecraft.item.Item.Properties()).group(TAB_GENERAL);

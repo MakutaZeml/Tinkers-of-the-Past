@@ -61,12 +61,16 @@ public class ItemTagProvider extends ItemTagsProvider {
     }
 
     private void addTools() {
+        this.getOrCreateBuilder(TinkerTags.Items.DURABILITY)
+                .add(DelightTools.mace.get())
+                .add(DelightTools.warHammer.get())
+                .add(DelightTools.naginata.get());
         this.getOrCreateBuilder(TinkerTags.Items.MULTIPART_TOOL)
                 .add(DelightTools.mace.get())
                 .add(DelightTools.warHammer.get())
                 .add(DelightTools.naginata.get());
         this.getOrCreateBuilder(TinkerTags.Items.AOE)
-                .add(DelightTools.mace.get())
+                //.add(DelightTools.mace.get())
                 .add(DelightTools.warHammer.get());
         this.getOrCreateBuilder(TinkerTags.Items.HARVEST)
                 .add(DelightTools.mace.get());
@@ -76,6 +80,8 @@ public class ItemTagProvider extends ItemTagsProvider {
                 .add(DelightTools.naginata.get());
         this.getOrCreateBuilder(TinkerTags.Items.STONE_HARVEST)
                 .add(DelightTools.mace.get());
+        this.getOrCreateBuilder(TinkerTags.Items.TWO_HANDED)
+                .add(DelightTools.warHammer.get());
     }
 
     private void addSmeltery() {

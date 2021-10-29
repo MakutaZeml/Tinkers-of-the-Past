@@ -4,10 +4,18 @@
   "textures": {
     "head":        "tdelight:item/tool/naginata/head",
     "broken_head": "tdelight:item/tool/naginata/broken_head",
-    "handle":      "tdelight:item/tool/naginata/handle"
+    "handle":      "tdelight:item/tool/naginata/handle",
+    "binding":     "tdelight:item/tool/naginata/binding",
+    "large_head":        "tdelight:item/tool/naginata/large/head",
+    "large_broken_head": "tdelight:item/tool/naginata/large/broken_head",
+    "large_handle":      "tdelight:item/tool/naginata/large/handle",
+    "large_binding":     "tdelight:item/tool/naginata/large/binding"
   },
-  "parts": [
+  "large": true,
+  "large_offset": [-2,2],
+  "parts":[
     { "name": "handle",  "index": 1 },
-    { "name": "head",    "index": 0, "broken": "broken_head" }
+    { "name": "head",    "index": 0, "broken": "broken_head" },
+    { "name": "binding", "index": 2 }
   ]
 }

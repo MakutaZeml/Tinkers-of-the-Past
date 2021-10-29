@@ -29,13 +29,14 @@ public class MaterialStatsDataProvider extends AbstractMaterialStatsDataProvider
                 HandleMaterialStats.DEFAULT.withDurability(0.6f).withAttackSpeed(0.75f).withMiningSpeed(0.6f),
                 ExtraMaterialStats.DEFAULT);
 
+        // todo: mess with these stats
         addMaterialStats(MaterialIds.rosenquartz,
-                new HeadMaterialStats(720, 7f, DIAMOND, 2f),
-                HandleMaterialStats.DEFAULT.withDurability(1.1f).withMiningSpeed(1.15f),
+                new HeadMaterialStats(300, 8f, DIAMOND, 1.2f),
+                HandleMaterialStats.DEFAULT.withDurability(0.9f).withMiningSpeed(1.15f),
                 ExtraMaterialStats.DEFAULT);
 
         addMaterialStats(MaterialIds.gildedfern,
-                new HeadMaterialStats(580, 6f, DIAMOND, 2.5f),
+                new HeadMaterialStats(380, 6f, DIAMOND, 1.1f),
                 HandleMaterialStats.DEFAULT.withDurability(1.15f).withAttackDamage(1.1f).withMiningSpeed(0.8f),
                 ExtraMaterialStats.DEFAULT);
     }

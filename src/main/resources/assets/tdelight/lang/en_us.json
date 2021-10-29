@@ -1,4 +1,10 @@
 {
+    "_comment": "Item groups",
+    "itemGroup.tdelight.tool_parts": "Tinker's Delight Tool Parts",
+    "itemGroup.tdelight.general": "Tinker's Delight",
+    "itemGroup.tdelight.tools": "Tinker's Delight Tools",
+    "itemGroup.tdelight.smeltery": "Tinker's Delight Smeltery",
+
     "_comment": "Items",
     "item.tdelight.tinkers_handbook": "Tinker's Handbook",
     "item.tdelight.tinkers_handbook.tooltip": "It reads good.",

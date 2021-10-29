@@ -11,8 +11,8 @@ public final class ToolBaseStatDefinitions {
             .modifier(ToolStats.ATTACK_SPEED, 1.1f)
             .modifier(ToolStats.MINING_SPEED, 0.5f)
             .modifier(ToolStats.DURABILITY, 1.1f)
-            .startingSlots(SlotType.UPGRADE,2)
-            .startingSlots(SlotType.ABILITY, 2)
+            //.startingSlots(SlotType.UPGRADE,2)
+            .startingSlots(SlotType.ABILITY, 1)
             .build();
 
     static final ToolBaseStatDefinition NAGINATA = new ToolBaseStatDefinition.Builder()
@@ -20,8 +20,8 @@ public final class ToolBaseStatDefinitions {
             .modifier(ToolStats.ATTACK_SPEED, 0.9f)
             .modifier(ToolStats.MINING_SPEED, 0.5f)
             .modifier(ToolStats.DURABILITY, 1.2f)
-            .startingSlots(SlotType.UPGRADE,2)
-            .startingSlots(SlotType.ABILITY, 1)
+            .startingSlots(SlotType.UPGRADE,1)
+            //.startingSlots(SlotType.ABILITY, 1)
             .build();
 
     static final ToolBaseStatDefinition WAR_HAMMER = new ToolBaseStatDefinition.Builder()

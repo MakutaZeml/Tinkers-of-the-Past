@@ -2,23 +2,23 @@
   "loader": "tconstruct:tool",
   "parent": "forge:item/default-tool",
   "textures": {
-    "head":         "tconstruct:item/tool/vein_hammer/head",
-    "broken_head":  "tconstruct:item/tool/vein_hammer/broken_head",
-    "handle":       "tconstruct:item/tool/vein_hammer/handle",
+    "head":         "tdelight:item/tool/war_hammer/head",
+    "broken_head":  "tdelight:item/tool/war_hammer/broken_head",
+    "handle":       "tdelight:item/tool/war_hammer/handle",
     "back":         "tdelight:item/tool/war_hammer/back",
-    "front":        "tconstruct:item/tool/vein_hammer/front",
-    "broken_front": "tconstruct:item/tool/vein_hammer/broken_front",
+    "front":        "tdelight:item/tool/war_hammer/front",
+    "broken_front": "tdelight:item/tool/war_hammer/broken_front",
 
-    "large_head":         "tconstruct:item/tool/vein_hammer/large/head",
-    "large_broken_head":  "tconstruct:item/tool/vein_hammer/large/broken_head",
-    "large_handle":       "tconstruct:item/tool/vein_hammer/large/handle",
+    "large_head":         "tdelight:item/tool/war_hammer/large/head",
+    "large_broken_head":  "tdelight:item/tool/war_hammer/large/broken_head",
+    "large_handle":       "tdelight:item/tool/war_hammer/large/handle",
     "large_back":         "tdelight:item/tool/war_hammer/large/back",
-    "large_front":        "tconstruct:item/tool/vein_hammer/large/front",
-    "large_broken_front": "tconstruct:item/tool/vein_hammer/large/broken_front"
+    "large_front":        "tdelight:item/tool/war_hammer/large/front",
+    "large_broken_front": "tdelight:item/tool/war_hammer/large/broken_front"
   },
   "modifier_roots": {
-    "small": [ "tconstruct:item/tool/vein_hammer/modifiers/" ],
-    "large": [ "tconstruct:item/tool/vein_hammer/large/modifiers/" ]
+    "small": [ "tdelight:item/tool/war_hammer/modifiers/" ],
+    "large": [ "tdelight:item/tool/war_hammer/large/modifiers/" ]
   },
   "large": true,
   "large_offset": [-2, 2],

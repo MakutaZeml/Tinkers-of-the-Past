@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "tdelight:hamletite_ingot",
+  "ingredients": [
+    {
+      "item": "tdelight:hamletite_block"
+    }
+  ],
+  "result": {
+    "item": "tdelight:hamletite_ingot",
+    "count": 9
+  }
+}

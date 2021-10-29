@@ -31,5 +31,4 @@ public class DelightToolParts extends TinkerModule {
 
     public static final ItemObject<ToolPartItem> maceHead = TDelight.ITEMS.register("mace_head", () -> new ToolPartItem(PARTS_PROPS, HeadMaterialStats.ID));
     public static final ItemObject<ToolPartItem> naginataHead = TDelight.ITEMS.register("naginata_head", () -> new ToolPartItem(PARTS_PROPS, HeadMaterialStats.ID));
-    //public static final ItemObject<ToolPartItem> warHammerHead = TDelight.ITEMS.register("war_hammer_head", () -> new ToolPartItem(PARTS_PROPS, HeadMaterialStats.ID));
 }

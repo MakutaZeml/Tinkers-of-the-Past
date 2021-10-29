@@ -1,0 +1,21 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "value": {
+        "tag": "forge:dusts/hamletite",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
+    }
+  ],
+  "ingredient": {
+    "tag": "forge:dusts/hamletite"
+  },
+  "result": {
+    "fluid": "tdelight:molten_hamletite",
+    "amount": 144
+  },
+  "temperature": 700,
+  "time": 43
+}

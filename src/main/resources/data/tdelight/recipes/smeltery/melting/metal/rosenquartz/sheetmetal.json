@@ -1,0 +1,21 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "value": {
+        "tag": "forge:sheetmetals/rosenquartz",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
+    }
+  ],
+  "ingredient": {
+    "tag": "forge:sheetmetals/rosenquartz"
+  },
+  "result": {
+    "fluid": "tdelight:molten_rosenquartz",
+    "amount": 144
+  },
+  "temperature": 700,
+  "time": 57
+}
