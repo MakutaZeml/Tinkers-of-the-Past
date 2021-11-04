@@ -6,9 +6,6 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.data.FluidTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import slimeknights.mantle.registration.object.FluidObject;
-import slimeknights.tconstruct.TConstruct;
-
-import javax.annotation.Nullable;
 
 public class FluidTagProvider extends FluidTagsProvider {
 
@@ -18,10 +15,9 @@ public class FluidTagProvider extends FluidTagsProvider {
 
     @Override
     protected void registerTags() {
-
-        tagLocal(DelightFluids.moltenHamletite);
-        tagLocal(DelightFluids.moltenRosenquartz);
-        tagLocal(DelightFluids.moltenGildedfern);
+        tagAll(DelightFluids.moltenHamletite);
+        tagAll(DelightFluids.moltenRosenquartz);
+        tagAll(DelightFluids.moltenGildedfern);
     }
 
     @Override
