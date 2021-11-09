@@ -4,7 +4,7 @@
 
 This mod is an add-on to Tinkers' Construct for 1.16 and adds new weapons, materials, and traits.
 
-![Weapons and materials](web/images/new-1.4-alpha.png "New weapons and materials")
+![Weapons and materials](web/images/header.png "New weapons and materials")
 
 ## Weapons
 * **Mace** - Bonks enemies with increased knockback.
