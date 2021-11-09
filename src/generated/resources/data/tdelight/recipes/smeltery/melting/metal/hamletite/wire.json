@@ -1,0 +1,21 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "value": {
+        "tag": "forge:wires/hamletite",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
+    }
+  ],
+  "ingredient": {
+    "tag": "forge:wires/hamletite"
+  },
+  "result": {
+    "fluid": "tdelight:molten_hamletite",
+    "amount": 72
+  },
+  "temperature": 700,
+  "time": 11
+}

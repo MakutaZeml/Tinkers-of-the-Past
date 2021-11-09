@@ -45,7 +45,7 @@ public class DelightToolsRecipeProvider extends DelightBaseRecipeProvider implem
         String castFolder = "smeltery/casts/";
 
         partRecipes(consumer, DelightToolParts.maceHead, DelightSmeltery.maceHeadCast, 2, partFolder, castFolder);
-        partRecipes(consumer, DelightToolParts.naginataHead, DelightSmeltery.naginataHeadCast, 2, partFolder, castFolder);
+        //partRecipes(consumer, DelightToolParts.naginataHead, DelightSmeltery.naginataHeadCast, 2, partFolder, castFolder);
     }
 
     private void addMaterialsRecipes(Consumer<IFinishedRecipe> consumer) {

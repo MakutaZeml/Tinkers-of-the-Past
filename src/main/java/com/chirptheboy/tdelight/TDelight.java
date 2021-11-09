@@ -51,7 +51,8 @@ import slimeknights.tconstruct.library.tools.part.MaterialItem;
 import java.util.Optional;
 import java.util.function.Supplier;
 
-import static com.chirptheboy.tdelight.tools.data.shared.DelightToolParts.*;
+import static com.chirptheboy.tdelight.tools.data.shared.DelightToolParts.maceHead;
+import static com.chirptheboy.tdelight.tools.data.shared.DelightToolParts.naginataHead;
 
 @Mod(TDelight.modID)
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)

@@ -6,6 +6,8 @@ import com.chirptheboy.tdelight.tools.MaceTool;
 import com.chirptheboy.tdelight.tools.NaginataTool;
 import com.chirptheboy.tdelight.tools.WarHammerTool;
 import com.chirptheboy.tdelight.tools.data.DelightToolsRecipeProvider;
+import com.chirptheboy.tdelight.tools.data.StationSlotLayoutProvider;
+import com.chirptheboy.tdelight.tools.data.ToolDefinitionDataProvider;
 import com.chirptheboy.tdelight.tools.data.materials.MaterialDataProvider;
 import com.chirptheboy.tdelight.tools.data.materials.MaterialStatsDataProvider;
 import com.chirptheboy.tdelight.tools.data.materials.MaterialTraitsDataProvider;
@@ -46,6 +48,8 @@ public class DelightTools extends TinkerModule {
             generator.addProvider(materials);
             generator.addProvider(new MaterialStatsDataProvider(generator, materials));
             generator.addProvider(new MaterialTraitsDataProvider(generator, materials));
+            generator.addProvider(new ToolDefinitionDataProvider(generator));
+            generator.addProvider(new StationSlotLayoutProvider(generator));
         }
     }
 }
