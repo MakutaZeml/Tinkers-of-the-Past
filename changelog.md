@@ -1,3 +1,8 @@
+### 1.8
+* Make compatible with TiC 3.3.0.307
+* Fixed bug where naginata and mace head casts didn't match the heads themselves
+* MD5: `7e9afbd1671befa3c4ba08346e1ffdcc`
+
 ### 1.7
 * Convert tool recipes and definitions to datapacks (TiC 3.2.0.290)
 * Turned off cooldown effect visibility
