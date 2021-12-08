@@ -9,7 +9,7 @@ import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
 import slimeknights.tconstruct.common.TinkerModule;
 import slimeknights.tconstruct.common.recipe.RecipeCacheInvalidator;
 
-public class DelightCommons extends TinkerModule {
+public class DelightCommons { 
 
     public DelightCommons() {
         MinecraftForge.EVENT_BUS.addListener(RecipeCacheInvalidator::onReloadListenerReload);

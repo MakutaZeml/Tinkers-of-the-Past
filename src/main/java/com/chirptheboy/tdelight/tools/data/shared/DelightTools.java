@@ -24,7 +24,7 @@ import slimeknights.tconstruct.tools.TinkerTools;
 
 import java.util.function.Supplier;
 
-public class DelightTools extends TinkerModule {
+public class DelightTools {
     public DelightTools() {
         BlockSideHitListener.init();
     }

@@ -8,9 +8,8 @@ import net.minecraftforge.fluids.FluidAttributes;
 import net.minecraftforge.fluids.ForgeFlowingFluid;
 import slimeknights.mantle.registration.ModelFluidAttributes;
 import slimeknights.mantle.registration.object.FluidObject;
-import slimeknights.tconstruct.common.TinkerModule;
 
-public class DelightFluids extends TinkerModule {
+public class DelightFluids {
 
     public DelightFluids() {
         ForgeMod.enableMilkFluid();

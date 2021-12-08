@@ -9,7 +9,7 @@ import slimeknights.tconstruct.common.TinkerModule;
 import slimeknights.tconstruct.common.registration.CastItemObject;
 import slimeknights.tconstruct.smeltery.TinkerSmeltery;
 
-public class DelightSmeltery extends TinkerModule {
+public class DelightSmeltery {
 
     /** Tab for all blocks related to the smeltery */
     public static final ItemGroup TAB_SMELTERY = new SupplierItemGroup(TDelight.modID, "smeltery", () -> new ItemStack(TinkerSmeltery.smelteryController));

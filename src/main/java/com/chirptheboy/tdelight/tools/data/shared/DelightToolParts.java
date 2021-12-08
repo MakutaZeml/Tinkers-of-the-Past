@@ -17,7 +17,7 @@ import slimeknights.tconstruct.tools.stats.HeadMaterialStats;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DelightToolParts extends TinkerModule {
+public class DelightToolParts {// extends TinkerModule {
 
     public static final ItemGroup TAB_TOOL_PARTS = new SupplierItemGroup(TDelight.modID, "tool_parts", () -> {
         List<IMaterial> materials = new ArrayList<>(MaterialRegistry.getInstance().getVisibleMaterials());
