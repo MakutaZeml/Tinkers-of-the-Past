@@ -12,6 +12,10 @@ import slimeknights.tconstruct.common.registration.MetalItemObject;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
+/** Copied directly from TiC.
+ * @author SlimeKnights
+ * @author https://github.com/SlimeKnights
+ */
 public class BlockDeferredRegisterExtension extends BlockDeferredRegister {
 
     public BlockDeferredRegisterExtension(String modID) {
