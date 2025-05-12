@@ -1,20 +1,21 @@
 modLoader="javafml" #mandatory
 loaderVersion="${loader_range}" #mandatory 
 license="LGPL3"
-issueTrackerURL="https://gitlab.com/ChirpTheBoy/TinkersDelight/issues" #optional
+issueTrackerURL="" #optional
 [[mods]] #mandatory
-modId="tdelight" #mandatory
+modId="tjojo" #mandatory
 version="${version}" #mandatory
-displayName="Tinker's Delight" #mandatory
+displayName="Tinkers of the Past" #mandatory
 #updateJSONURL="https://change.me.example.invalid/updates.json" #optional
-displayURL="https://gitlab.com/ChirpTheBoy/TinkersDelight" #optional
-#logoFile="tdelight.png" #optional
+displayURL="" #optional
+logoFile="tjojo.png" #optional
 #credits="Thanks for this example mod goes to Java" #optional
-authors="ChirpTheBoy" #optional
+authors="Zeml" #optional
 description='''
-Adds Tinkers stuff
+A mod bridge that adds compatibility between Jojo: Ripples of the Past mod and tinkers construct
+T'Delight was used as template to do this addon
 '''
-[[dependencies.tdelight]] #optional
+[[dependencies.tjojo]] #optional
     # the modid of the dependency
     modId="forge" #mandatory
     # Does this dependency have to exist - if not, ordering below must be specified
@@ -26,21 +27,27 @@ Adds Tinkers stuff
     # Side this dependency is applied on - BOTH, CLIENT or SERVER
     side="BOTH"
 # Here's another dependency
-[[dependencies.tdelight]]
+[[dependencies.tjojo]]
     modId="minecraft"
     mandatory=true
     versionRange="${minecraft_range}"
     ordering="NONE"
     side="BOTH"
-[[dependencies.tdelight]]
+[[dependencies.tjojo]]
     modId="mantle"
     mandatory=true
     versionRange="${mantle_range}"
     ordering="NONE"
     side="BOTH"
-[[dependencies.tdelight]]
+[[dependencies.tjojo]]
     modId="tconstruct"
     mandatory=true
     versionRange="${tconstruct_range}"
     ordering="NONE"
+    side="BOTH"
+[[dependencies.tjojo]]
+    modId="jojo"
+    mandatory=true
+    versionRange="[0.2.2,0.3)"
+    ordering="AFTER"
     side="BOTH"

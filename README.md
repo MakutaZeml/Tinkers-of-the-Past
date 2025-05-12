@@ -1,32 +1,14 @@
-![Availability](http://cf.way2muchnoise.eu/versions/490440.svg) ![Downloads](http://cf.way2muchnoise.eu/full_490440_downloads.svg)
+# Tinkers Construct
+A mod bridge that adds compatibility between Jojo: Ripples of the Past mod and tinkers construct
 
-### Download on Curseforge: https://www.curseforge.com/minecraft/mc-mods/tinkers-delight
-
-This mod is an add-on to Tinkers' Construct for 1.16 and adds new weapons, materials, and traits.
-
-![Weapons and materials](web/images/header.png "New weapons and materials")
-
-## Weapons
-* **Mace** - Bonks enemies with increased knockback.
-* **Naginata** - It's a knife on a long stick.
-* **War Hammer**  - Powerful but slow. Right-click the ground to blast enemies away. Compatible with other abilities and upgrades:
-   * Haste: reduced cooldown
-   * Blasting: increased height
-   * Knockback: increased distance
-   * Range: increase AOE
 
 ## Materials
-Three new materials, all created with the Tinkers Smeltery. Alas poor Yorick, you'll need to use JEI to discover them and learn their recipes.
+This addon adds meteoric and stand arrow alloy to tinkers construct materials
 
 ## Traits
-* **Liftoff** - Knocks nearby enemies up, up, and away when you strike the ground with it.
-* **Vengeful** - The more kills you make with a tool, the higher the attack damage bonus.
+* **Meteor Virus** - Gives virus to the enemies that are hit
+* **Stand Arrow** - Makes the weapons work as Stand Arrow
 
-## Configurations
-- `vengefulDamageCap` applies a cap to the damage bonus for a weapon with Vengeful trait. Default is 0 (no cap).
-
-## Mod issues
-Please log any issues or feature requests on the [Gitlab issue tracker](https://gitlab.com/chirptheboy/tinkers-delight/-/issues).
 
 ## Modpack makers
 - Feel free to include this in your modpacks
@@ -34,3 +16,5 @@ Please log any issues or feature requests on the [Gitlab issue tracker](https://
 ## Special thanks
 - [Slimeknights](https://github.com/SlimeKnights/) - Authors of [Tinkers Construct](https://www.curseforge.com/minecraft/mc-mods/tinkers-construct) and [Mantle](https://www.curseforge.com/minecraft/mc-mods/mantle)
 - [Princess of Evil](https://www.curseforge.com/members/princessofevil/projects) - For code references
+- [Chirp](https://gitlab.com/chirptheboy) - I used his T Delight as a template
+- [StandoByte](https://github.com/StandoByte) For creating Ripples of the Past

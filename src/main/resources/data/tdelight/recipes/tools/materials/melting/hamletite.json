@@ -1,9 +1,0 @@
-{
-  "type": "tconstruct:material_melting",
-  "input": "tdelight:hamletite",
-  "temperature": 700,
-  "result": {
-    "fluid": "tdelight:molten_hamletite",
-    "amount": 144
-  }
-}

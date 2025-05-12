@@ -1,8 +1,7 @@
 {
   "replace": false,
   "values": [
-    "#forge:storage_blocks/hamletite",
-    "#forge:storage_blocks/rosenquartz",
-    "#forge:storage_blocks/gildedfern"
+    "#forge:storage_blocks/stand_arrow_alloy",
+    "#forge:storage_blocks/meteor"
   ]
 }

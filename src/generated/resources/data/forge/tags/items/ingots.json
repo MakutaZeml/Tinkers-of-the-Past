@@ -1,8 +1,7 @@
 {
   "replace": false,
   "values": [
-    "#forge:ingots/hamletite",
-    "#forge:ingots/rosenquartz",
-    "#forge:ingots/gildedfern"
+    "#forge:ingots/stand_arrow_alloy",
+    "#forge:ingots/meteor"
   ]
 }

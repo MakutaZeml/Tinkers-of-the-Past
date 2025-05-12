@@ -1,0 +1,35 @@
+{
+    
+    "_comment": "Stand Arrow",
+    "material.tjojo.stand_arrow_alloy": "Stand Arrow Alloy",
+    "block.jojo.stand_arrow_alloy_block": "Block of Stand Arrow Alloy",
+    "block.tjojo.stand_arrow_alloy_block.tooltip": "Can be used as beacon base",
+    "item.jojo.stand_arrow_alloy_nugget": "Stand Arrow Alloy Nugget",
+    "block.tjojo.molten_stand_arrow_alloy_fluid": "Molten Stand Arrow Alloy",
+    "fluid.tjojo.molten_stand_arrow_alloy": "Molten Stand Arrow Alloy",
+    "fluid.tjojo.flowing_molten_stand_arrow_alloy": "Flowing Molten Stand Arrow Alloy",
+    "item.tjojo.molten_stand_arrow_alloy_bucket": "Molten Stand Arrow Alloy Bucket",
+
+    "_comment": "Meteor",
+    "material.tjojo.meteor": "Meteor",
+    "block.jojo.meteor_block": "Block of Meteor",
+    "block.jojo.meteor_block.tooltip": "Can be used as beacon base",
+    "item.jojo.meteor_nugget": "Meteor Nugget",
+    "item.jojo.meteor_ingot": "Meteor Ingot",
+    "block.tjojo.molten_meteor_fluid": "Molten Meteor",
+    "fluid.tjojo.molten_meteor": "Molten Meteor",
+    "fluid.tjojo.flowing_molten_meteor": "Flowing Molten Meteor",
+    "item.tjojo.molten_meteor_bucket": "Molten Meteor Bucket",
+
+
+
+
+    "_comment": "Modifiers",
+    "modifier.tjojo.stando_arrow": "Stand Arrow",
+    "modifier.tjojo.stando_arrow.flavor": "Do you believe in gravity?",
+    "modifier.tjojo.stando_arrow.description": "Cutting with the tool can give a Stand to the Target",
+
+    "modifier.tjojo.meteor_virus": "Meteor Virus",
+    "modifier.tjojo.meteor_virus.flavor": "From Greenland",
+    "modifier.tjojo.meteor_virus.description": "Not refined, it gives virus to the victim"
+}

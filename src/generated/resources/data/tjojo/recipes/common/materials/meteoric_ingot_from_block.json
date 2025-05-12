@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "jojo:meteoric_ingot",
+  "ingredients": [
+    {
+      "item": "jojo:stand_arrow_alloy_block"
+    }
+  ],
+  "result": {
+    "item": "jojo:meteoric_ingot",
+    "count": 9
+  }
+}

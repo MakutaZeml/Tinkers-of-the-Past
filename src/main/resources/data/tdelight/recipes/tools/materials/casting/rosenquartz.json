@@ -1,9 +1,0 @@
-{
-  "type": "tconstruct:material_fluid",
-  "fluid": {
-    "tag": "tdelight:molten_rosenquartz",
-    "amount": 144
-  },
-  "temperature": 700,
-  "output": "tdelight:rosenquartz"
-}

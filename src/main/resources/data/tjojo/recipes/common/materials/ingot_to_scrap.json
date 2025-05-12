@@ -1,0 +1,15 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "jojo:meteor_ingot"
+    },
+    {
+      "item": "jojo:meteor_ingot"
+    }
+  ],
+  "result": {
+    "item": "jojo:meteoric_scrap",
+    "count": 2
+  }
+}

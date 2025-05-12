@@ -1,8 +1,7 @@
 {
   "replace": false,
   "values": [
-    "#forge:nuggets/hamletite",
-    "#forge:nuggets/rosenquartz",
-    "#forge:nuggets/gildedfern"
+    "#forge:nuggets/stand_arrow_alloy",
+    "#forge:nuggets/meteor"
   ]
 }
