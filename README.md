@@ -1,4 +1,5 @@
-# Tinkers Construct
+# ![Tinkers of the Past](https://github.com/MakutaZeml/Tinkers-of-the-Past/blob/main/src/main/resources/tjojo.png?raw=true)
+# Tinkers of The Past
 A mod bridge that adds compatibility between Jojo: Ripples of the Past mod and tinkers construct
 
 
