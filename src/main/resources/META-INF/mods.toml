@@ -12,8 +12,7 @@ logoFile="tjojo.png" #optional
 #credits="Thanks for this example mod goes to Java" #optional
 authors="Zeml" #optional
 description='''
-A mod bridge that adds compatibility between Jojo: Ripples of the Past mod and tinkers construct
-T'Delight was used as template to do this addon
+A mod bridge that adds compatibility between Jojo: Ripples of the Past mod and tinkers construct, T'Delight was used as template to do this addon
 '''
 [[dependencies.tjojo]] #optional
     # the modid of the dependency
